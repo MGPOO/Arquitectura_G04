@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://alex:8080/ConUni_Soap_Java_G04/ConversorService?wsdl" uri="xml-resources/web-service-references/ConversorService/wsdl/alex_8080/ConUni_Soap_Java_G04/ConversorService.wsdl"/>
+    <system systemId="http://alex:8080/ConUni_Soap_Java_G04/ConversorService?xsd=1" uri="xml-resources/web-service-references/ConversorService/wsdl/alex_8080/ConUni_Soap_Java_G04/ConversorService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/ConUni_Soap_Java_G04/ConversorService?wsdl" uri="xml-resources/web-service-references/ConversorService/wsdl/localhost_8080/ConUni_Soap_Java_G04/ConversorService.wsdl"/>
+    <system systemId="http://localhost:8080/ConUni_Soap_Java_G04/ConversorService?xsd=1" uri="xml-resources/web-service-references/ConversorService/wsdl/localhost_8080/ConUni_Soap_Java_G04/ConversorService.xsd_1.xsd"/>
+</catalog>

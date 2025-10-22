@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConUni_Soap_Dotnet_CliWeb_G04", "ConUni_Soap_Dotnet_CliWeb_G04\ConUni_Soap_Dotnet_CliWeb_G04.csproj", "{C17F0C1E-3E66-4A8F-ADEC-171F4663C91E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C17F0C1E-3E66-4A8F-ADEC-171F4663C91E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C17F0C1E-3E66-4A8F-ADEC-171F4663C91E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C17F0C1E-3E66-4A8F-ADEC-171F4663C91E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C17F0C1E-3E66-4A8F-ADEC-171F4663C91E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F9A826BD-FFAF-4A5D-99BC-E687CC0A8D24}
+	EndGlobalSection
+EndGlobal

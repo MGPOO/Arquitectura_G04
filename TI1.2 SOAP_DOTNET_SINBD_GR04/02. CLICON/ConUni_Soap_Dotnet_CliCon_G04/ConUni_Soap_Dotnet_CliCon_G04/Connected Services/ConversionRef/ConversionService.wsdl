@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="ConversionService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:52091/ec.edu.espe.monster.ws/ConversionService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:52091/ec.edu.espe.monster.ws/ConversionService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IConversionService_CentimetersToFeet_InputMessage">
+    <wsdl:part name="parameters" element="tns:CentimetersToFeet" />
+  </wsdl:message>
+  <wsdl:message name="IConversionService_CentimetersToFeet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CentimetersToFeetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConversionService_FeetToCentimeters_InputMessage">
+    <wsdl:part name="parameters" element="tns:FeetToCentimeters" />
+  </wsdl:message>
+  <wsdl:message name="IConversionService_FeetToCentimeters_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FeetToCentimetersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConversionService_MetersToYards_InputMessage">
+    <wsdl:part name="parameters" element="tns:MetersToYards" />
+  </wsdl:message>
+  <wsdl:message name="IConversionService_MetersToYards_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MetersToYardsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConversionService_YardsToMeters_InputMessage">
+    <wsdl:part name="parameters" element="tns:YardsToMeters" />
+  </wsdl:message>
+  <wsdl:message name="IConversionService_YardsToMeters_OutputMessage">
+    <wsdl:part name="parameters" element="tns:YardsToMetersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConversionService_InchesToCentimeters_InputMessage">
+    <wsdl:part name="parameters" element="tns:InchesToCentimeters" />
+  </wsdl:message>
+  <wsdl:message name="IConversionService_InchesToCentimeters_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InchesToCentimetersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConversionService_CentimetersToInches_InputMessage">
+    <wsdl:part name="parameters" element="tns:CentimetersToInches" />
+  </wsdl:message>
+  <wsdl:message name="IConversionService_CentimetersToInches_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CentimetersToInchesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConversionService_KilogramsToPounds_InputMessage">
+    <wsdl:part name="parameters" element="tns:KilogramsToPounds" />
+  </wsdl:message>
+  <wsdl:message name="IConversionService_KilogramsToPounds_OutputMessage">
+    <wsdl:part name="parameters" element="tns:KilogramsToPoundsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConversionService_PoundsToKilograms_InputMessage">
+    <wsdl:part name="parameters" element="tns:PoundsToKilograms" />
+  </wsdl:message>
+  <wsdl:message name="IConversionService_PoundsToKilograms_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PoundsToKilogramsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConversionService_GramsToOunces_InputMessage">
+    <wsdl:part name="parameters" element="tns:GramsToOunces" />
+  </wsdl:message>
+  <wsdl:message name="IConversionService_GramsToOunces_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GramsToOuncesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConversionService_OuncesToGrams_InputMessage">
+    <wsdl:part name="parameters" element="tns:OuncesToGrams" />
+  </wsdl:message>
+  <wsdl:message name="IConversionService_OuncesToGrams_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OuncesToGramsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConversionService_CelsiusToFahrenheit_InputMessage">
+    <wsdl:part name="parameters" element="tns:CelsiusToFahrenheit" />
+  </wsdl:message>
+  <wsdl:message name="IConversionService_CelsiusToFahrenheit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CelsiusToFahrenheitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConversionService_FahrenheitToCelsius_InputMessage">
+    <wsdl:part name="parameters" element="tns:FahrenheitToCelsius" />
+  </wsdl:message>
+  <wsdl:message name="IConversionService_FahrenheitToCelsius_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FahrenheitToCelsiusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConversionService_CelsiusToKelvin_InputMessage">
+    <wsdl:part name="parameters" element="tns:CelsiusToKelvin" />
+  </wsdl:message>
+  <wsdl:message name="IConversionService_CelsiusToKelvin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CelsiusToKelvinResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConversionService_KelvinToCelsius_InputMessage">
+    <wsdl:part name="parameters" element="tns:KelvinToCelsius" />
+  </wsdl:message>
+  <wsdl:message name="IConversionService_KelvinToCelsius_OutputMessage">
+    <wsdl:part name="parameters" element="tns:KelvinToCelsiusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConversionService_FahrenheitToKelvin_InputMessage">
+    <wsdl:part name="parameters" element="tns:FahrenheitToKelvin" />
+  </wsdl:message>
+  <wsdl:message name="IConversionService_FahrenheitToKelvin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FahrenheitToKelvinResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConversionService_KelvinToFahrenheit_InputMessage">
+    <wsdl:part name="parameters" element="tns:KelvinToFahrenheit" />
+  </wsdl:message>
+  <wsdl:message name="IConversionService_KelvinToFahrenheit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:KelvinToFahrenheitResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IConversionService">
+    <wsdl:operation name="CentimetersToFeet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConversionService/CentimetersToFeet" message="tns:IConversionService_CentimetersToFeet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConversionService/CentimetersToFeetResponse" message="tns:IConversionService_CentimetersToFeet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FeetToCentimeters">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConversionService/FeetToCentimeters" message="tns:IConversionService_FeetToCentimeters_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConversionService/FeetToCentimetersResponse" message="tns:IConversionService_FeetToCentimeters_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MetersToYards">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConversionService/MetersToYards" message="tns:IConversionService_MetersToYards_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConversionService/MetersToYardsResponse" message="tns:IConversionService_MetersToYards_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="YardsToMeters">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConversionService/YardsToMeters" message="tns:IConversionService_YardsToMeters_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConversionService/YardsToMetersResponse" message="tns:IConversionService_YardsToMeters_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InchesToCentimeters">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConversionService/InchesToCentimeters" message="tns:IConversionService_InchesToCentimeters_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConversionService/InchesToCentimetersResponse" message="tns:IConversionService_InchesToCentimeters_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CentimetersToInches">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConversionService/CentimetersToInches" message="tns:IConversionService_CentimetersToInches_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConversionService/CentimetersToInchesResponse" message="tns:IConversionService_CentimetersToInches_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="KilogramsToPounds">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConversionService/KilogramsToPounds" message="tns:IConversionService_KilogramsToPounds_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConversionService/KilogramsToPoundsResponse" message="tns:IConversionService_KilogramsToPounds_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PoundsToKilograms">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConversionService/PoundsToKilograms" message="tns:IConversionService_PoundsToKilograms_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConversionService/PoundsToKilogramsResponse" message="tns:IConversionService_PoundsToKilograms_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GramsToOunces">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConversionService/GramsToOunces" message="tns:IConversionService_GramsToOunces_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConversionService/GramsToOuncesResponse" message="tns:IConversionService_GramsToOunces_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OuncesToGrams">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConversionService/OuncesToGrams" message="tns:IConversionService_OuncesToGrams_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConversionService/OuncesToGramsResponse" message="tns:IConversionService_OuncesToGrams_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CelsiusToFahrenheit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConversionService/CelsiusToFahrenheit" message="tns:IConversionService_CelsiusToFahrenheit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConversionService/CelsiusToFahrenheitResponse" message="tns:IConversionService_CelsiusToFahrenheit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FahrenheitToCelsius">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConversionService/FahrenheitToCelsius" message="tns:IConversionService_FahrenheitToCelsius_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConversionService/FahrenheitToCelsiusResponse" message="tns:IConversionService_FahrenheitToCelsius_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CelsiusToKelvin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConversionService/CelsiusToKelvin" message="tns:IConversionService_CelsiusToKelvin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConversionService/CelsiusToKelvinResponse" message="tns:IConversionService_CelsiusToKelvin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="KelvinToCelsius">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConversionService/KelvinToCelsius" message="tns:IConversionService_KelvinToCelsius_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConversionService/KelvinToCelsiusResponse" message="tns:IConversionService_KelvinToCelsius_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FahrenheitToKelvin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConversionService/FahrenheitToKelvin" message="tns:IConversionService_FahrenheitToKelvin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConversionService/FahrenheitToKelvinResponse" message="tns:IConversionService_FahrenheitToKelvin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="KelvinToFahrenheit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConversionService/KelvinToFahrenheit" message="tns:IConversionService_KelvinToFahrenheit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConversionService/KelvinToFahrenheitResponse" message="tns:IConversionService_KelvinToFahrenheit_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IConversionService" type="tns:IConversionService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CentimetersToFeet">
+      <soap:operation soapAction="http://tempuri.org/IConversionService/CentimetersToFeet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FeetToCentimeters">
+      <soap:operation soapAction="http://tempuri.org/IConversionService/FeetToCentimeters" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MetersToYards">
+      <soap:operation soapAction="http://tempuri.org/IConversionService/MetersToYards" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="YardsToMeters">
+      <soap:operation soapAction="http://tempuri.org/IConversionService/YardsToMeters" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InchesToCentimeters">
+      <soap:operation soapAction="http://tempuri.org/IConversionService/InchesToCentimeters" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CentimetersToInches">
+      <soap:operation soapAction="http://tempuri.org/IConversionService/CentimetersToInches" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KilogramsToPounds">
+      <soap:operation soapAction="http://tempuri.org/IConversionService/KilogramsToPounds" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PoundsToKilograms">
+      <soap:operation soapAction="http://tempuri.org/IConversionService/PoundsToKilograms" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GramsToOunces">
+      <soap:operation soapAction="http://tempuri.org/IConversionService/GramsToOunces" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OuncesToGrams">
+      <soap:operation soapAction="http://tempuri.org/IConversionService/OuncesToGrams" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CelsiusToFahrenheit">
+      <soap:operation soapAction="http://tempuri.org/IConversionService/CelsiusToFahrenheit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FahrenheitToCelsius">
+      <soap:operation soapAction="http://tempuri.org/IConversionService/FahrenheitToCelsius" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CelsiusToKelvin">
+      <soap:operation soapAction="http://tempuri.org/IConversionService/CelsiusToKelvin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KelvinToCelsius">
+      <soap:operation soapAction="http://tempuri.org/IConversionService/KelvinToCelsius" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FahrenheitToKelvin">
+      <soap:operation soapAction="http://tempuri.org/IConversionService/FahrenheitToKelvin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KelvinToFahrenheit">
+      <soap:operation soapAction="http://tempuri.org/IConversionService/KelvinToFahrenheit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ConversionService">
+    <wsdl:port name="BasicHttpBinding_IConversionService" binding="tns:BasicHttpBinding_IConversionService">
+      <soap:address location="http://localhost:52091/ec.edu.espe.monster.ws/ConversionService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

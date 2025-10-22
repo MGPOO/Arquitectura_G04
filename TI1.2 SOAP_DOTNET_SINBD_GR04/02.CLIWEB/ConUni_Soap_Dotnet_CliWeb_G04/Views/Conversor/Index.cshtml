@@ -1,0 +1,92 @@
+﻿@{
+    ViewData["Title"] = "Conversor SOAP";
+}
+
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Conversor de Unidades (Cliente Web SOAP)</h2>
+
+    @if (!string.IsNullOrEmpty(ViewBag.Error))
+    {
+        <div class="alert alert-danger text-center">@ViewBag.Error</div>
+    }
+
+    <div class="row">
+        <!-- Conversión de Peso -->
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm p-4">
+                <h4 class="text-center text-primary">Conversión de Peso</h4>
+                <form asp-action="KgALibras" method="post" class="mb-3">
+                    <div class="mb-3">
+                        <label for="kg" class="form-label">Kilogramos a Libras</label>
+                        <input type="number" step="0.01" name="kg" id="kg" class="form-control" placeholder="Ingrese kilogramos" required />
+                    </div>
+                    <button type="submit" class="btn btn-success w-100">Convertir</button>
+                </form>
+
+                <form asp-action="LibrasAKg" method="post">
+                    <div class="mb-3">
+                        <label for="lb" class="form-label">Libras a Kilogramos</label>
+                        <input type="number" step="0.01" name="lb" id="lb" class="form-control" placeholder="Ingrese libras" required />
+                    </div>
+                    <button type="submit" class="btn btn-secondary w-100">Convertir</button>
+                </form>
+
+                @if (!string.IsNullOrEmpty(ViewBag.ResultadoPeso))
+                {
+                    <div class="alert alert-info text-center mt-3">
+                        <strong>@ViewBag.ResultadoPeso</strong>
+                    </div>
+                }
+            </div>
+        </div>
+
+        <!-- Conversión de Distancia -->
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm p-4">
+                <h4 class="text-center text-primary">Conversión de Distancia</h4>
+                <form asp-action="MetrosAYardas" method="post" class="mb-3">
+                    <div class="mb-3">
+                        <label for="metros" class="form-label">Metros a Yardas</label>
+                        <input type="number" step="0.01" name="metros" id="metros" class="form-control" placeholder="Ingrese metros" required />
+                    </div>
+                    <button type="submit" class="btn btn-success w-100">Convertir</button>
+                </form>
+
+                <form asp-action="CentimetrosAPies" method="post">
+                    <div class="mb-3">
+                        <label for="cm" class="form-label">Centímetros a Pies</label>
+                        <input type="number" step="0.01" name="cm" id="cm" class="form-control" placeholder="Ingrese centímetros" required />
+                    </div>
+                    <button type="submit" class="btn btn-secondary w-100">Convertir</button>
+                </form>
+
+                @if (!string.IsNullOrEmpty(ViewBag.ResultadoDistancia))
+                {
+                    <div class="alert alert-info text-center mt-3">
+                        <strong>@ViewBag.ResultadoDistancia</strong>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    body {
+        background: #f5f7fa;
+        font-family: "Segoe UI", sans-serif;
+    }
+
+    .card {
+        border-radius: 1rem;
+        border: none;
+    }
+
+    h2 {
+        color: #333;
+    }
+
+    button {
+        font-weight: bold;
+    }
+</style>

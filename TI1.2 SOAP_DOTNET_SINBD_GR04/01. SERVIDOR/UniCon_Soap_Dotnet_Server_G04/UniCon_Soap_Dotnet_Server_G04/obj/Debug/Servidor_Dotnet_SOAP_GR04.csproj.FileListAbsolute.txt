@@ -1,0 +1,7 @@
+C:\Users\suqui\source\repos\Servidor_Dotnet_SOAP_GR04\Servidor_Dotnet_SOAP_GR04\bin\Servidor_Dotnet_SOAP_GR04.dll.config
+C:\Users\suqui\source\repos\Servidor_Dotnet_SOAP_GR04\Servidor_Dotnet_SOAP_GR04\bin\Servidor_Dotnet_SOAP_GR04.dll
+C:\Users\suqui\source\repos\Servidor_Dotnet_SOAP_GR04\Servidor_Dotnet_SOAP_GR04\bin\Servidor_Dotnet_SOAP_GR04.pdb
+C:\Users\suqui\source\repos\Servidor_Dotnet_SOAP_GR04\Servidor_Dotnet_SOAP_GR04\obj\Debug\Servidor_Dotnet_SOAP_GR04.csproj.AssemblyReference.cache
+C:\Users\suqui\source\repos\Servidor_Dotnet_SOAP_GR04\Servidor_Dotnet_SOAP_GR04\obj\Debug\Servidor_Dotnet_SOAP_GR04.csproj.CoreCompileInputs.cache
+C:\Users\suqui\source\repos\Servidor_Dotnet_SOAP_GR04\Servidor_Dotnet_SOAP_GR04\obj\Debug\Servidor_Dotnet_SOAP_GR04.dll
+C:\Users\suqui\source\repos\Servidor_Dotnet_SOAP_GR04\Servidor_Dotnet_SOAP_GR04\obj\Debug\Servidor_Dotnet_SOAP_GR04.pdb

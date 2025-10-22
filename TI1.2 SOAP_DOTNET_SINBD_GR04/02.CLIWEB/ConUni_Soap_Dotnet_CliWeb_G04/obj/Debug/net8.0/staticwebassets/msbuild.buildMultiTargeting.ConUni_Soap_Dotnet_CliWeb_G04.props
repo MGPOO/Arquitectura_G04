@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\ConUni_Soap_Dotnet_CliWeb_G04.props" />
+</Project>

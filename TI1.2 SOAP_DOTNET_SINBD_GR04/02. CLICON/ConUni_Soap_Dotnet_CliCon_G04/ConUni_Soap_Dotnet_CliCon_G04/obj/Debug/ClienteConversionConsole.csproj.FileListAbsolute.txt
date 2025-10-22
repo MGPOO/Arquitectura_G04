@@ -1,0 +1,8 @@
+C:\Users\suqui\source\repos\ClienteConversionConsole\ClienteConversionConsole\bin\Debug\ClienteConversionConsole.exe.config
+C:\Users\suqui\source\repos\ClienteConversionConsole\ClienteConversionConsole\bin\Debug\ClienteConversionConsole.exe
+C:\Users\suqui\source\repos\ClienteConversionConsole\ClienteConversionConsole\bin\Debug\ClienteConversionConsole.pdb
+C:\Users\suqui\source\repos\ClienteConversionConsole\ClienteConversionConsole\obj\Debug\ClienteConversionConsole.csproj.AssemblyReference.cache
+C:\Users\suqui\source\repos\ClienteConversionConsole\ClienteConversionConsole\obj\Debug\ClienteConversionConsole.csproj.CoreCompileInputs.cache
+C:\Users\suqui\source\repos\ClienteConversionConsole\ClienteConversionConsole\obj\Debug\ClienteConversionConsole.exe
+C:\Users\suqui\source\repos\ClienteConversionConsole\ClienteConversionConsole\obj\Debug\ClienteConversionConsole.pdb
+C:\Users\suqui\source\repos\ClienteConversionConsole\ClienteConversionConsole\obj\Debug\ClienteConversionConsole.exe.config

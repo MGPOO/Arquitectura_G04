@@ -1,0 +1,85 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\suqui\\source\\repos\\Servidor_Dotnet_SOAP_GR04\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A4D8662F-E806-4D32-B9EE-9F69F7D1DA60}|Servidor_Dotnet_SOAP_GR04\\ConUni_Soap_Dotnet_Server_G04.csproj|c:\\users\\suqui\\source\\repos\\servidor_dotnet_soap_gr04\\servidor_dotnet_soap_gr04\\ec.edu.espe.monster.controlador\\conversionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4D8662F-E806-4D32-B9EE-9F69F7D1DA60}|Servidor_Dotnet_SOAP_GR04\\ConUni_Soap_Dotnet_Server_G04.csproj|solutionrelative:servidor_dotnet_soap_gr04\\ec.edu.espe.monster.controlador\\conversionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4D8662F-E806-4D32-B9EE-9F69F7D1DA60}|Servidor_Dotnet_SOAP_GR04\\Servidor_Dotnet_SOAP_GR04.csproj|C:\\Users\\suqui\\source\\repos\\Servidor_Dotnet_SOAP_GR04\\servidor_dotnet_soap_gr04\\ec.edu.espe.monster.ws\\conversionservice.svc||{FB9167C9-D3B8-4EDA-8083-9AF6B6F6DA62}",
+      "RelativeMoniker": "D:0:0:{A4D8662F-E806-4D32-B9EE-9F69F7D1DA60}|Servidor_Dotnet_SOAP_GR04\\Servidor_Dotnet_SOAP_GR04.csproj|solutionrelative:servidor_dotnet_soap_gr04\\ec.edu.espe.monster.ws\\conversionservice.svc||{FB9167C9-D3B8-4EDA-8083-9AF6B6F6DA62}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4D8662F-E806-4D32-B9EE-9F69F7D1DA60}|Servidor_Dotnet_SOAP_GR04\\Servidor_Dotnet_SOAP_GR04.csproj|C:\\Users\\suqui\\source\\repos\\Servidor_Dotnet_SOAP_GR04\\servidor_dotnet_soap_gr04\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A4D8662F-E806-4D32-B9EE-9F69F7D1DA60}|Servidor_Dotnet_SOAP_GR04\\Servidor_Dotnet_SOAP_GR04.csproj|solutionrelative:servidor_dotnet_soap_gr04\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4D8662F-E806-4D32-B9EE-9F69F7D1DA60}|Servidor_Dotnet_SOAP_GR04\\Servidor_Dotnet_SOAP_GR04.csproj|C:\\Users\\suqui\\source\\repos\\Servidor_Dotnet_SOAP_GR04\\servidor_dotnet_soap_gr04\\ec.edu.espe.monster.modelo\\iconversionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4D8662F-E806-4D32-B9EE-9F69F7D1DA60}|Servidor_Dotnet_SOAP_GR04\\Servidor_Dotnet_SOAP_GR04.csproj|solutionrelative:servidor_dotnet_soap_gr04\\ec.edu.espe.monster.modelo\\iconversionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ConversionService.svc",
+              "DocumentMoniker": "C:\\Users\\suqui\\source\\repos\\Servidor_Dotnet_SOAP_GR04\\Servidor_Dotnet_SOAP_GR04\\ec.edu.espe.monster.ws\\ConversionService.svc",
+              "RelativeDocumentMoniker": "Servidor_Dotnet_SOAP_GR04\\ec.edu.espe.monster.ws\\ConversionService.svc",
+              "ToolTip": "C:\\Users\\suqui\\source\\repos\\Servidor_Dotnet_SOAP_GR04\\Servidor_Dotnet_SOAP_GR04\\ec.edu.espe.monster.ws\\ConversionService.svc",
+              "RelativeToolTip": "Servidor_Dotnet_SOAP_GR04\\ec.edu.espe.monster.ws\\ConversionService.svc",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003504|",
+              "WhenOpened": "2025-10-21T19:38:24.023Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\suqui\\source\\repos\\Servidor_Dotnet_SOAP_GR04\\Servidor_Dotnet_SOAP_GR04\\Web.config",
+              "RelativeDocumentMoniker": "Servidor_Dotnet_SOAP_GR04\\Web.config",
+              "ToolTip": "C:\\Users\\suqui\\source\\repos\\Servidor_Dotnet_SOAP_GR04\\Servidor_Dotnet_SOAP_GR04\\Web.config",
+              "RelativeToolTip": "Servidor_Dotnet_SOAP_GR04\\Web.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-10-21T19:26:57.975Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ConversionService.cs",
+              "DocumentMoniker": "C:\\Users\\suqui\\source\\repos\\Servidor_Dotnet_SOAP_GR04\\Servidor_Dotnet_SOAP_GR04\\ec.edu.espe.monster.controlador\\ConversionService.cs",
+              "RelativeDocumentMoniker": "Servidor_Dotnet_SOAP_GR04\\ec.edu.espe.monster.controlador\\ConversionService.cs",
+              "ToolTip": "C:\\Users\\suqui\\source\\repos\\Servidor_Dotnet_SOAP_GR04\\Servidor_Dotnet_SOAP_GR04\\ec.edu.espe.monster.controlador\\ConversionService.cs",
+              "RelativeToolTip": "Servidor_Dotnet_SOAP_GR04\\ec.edu.espe.monster.controlador\\ConversionService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T19:20:30.638Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IConversionService.cs",
+              "DocumentMoniker": "C:\\Users\\suqui\\source\\repos\\Servidor_Dotnet_SOAP_GR04\\Servidor_Dotnet_SOAP_GR04\\ec.edu.espe.monster.modelo\\IConversionService.cs",
+              "RelativeDocumentMoniker": "Servidor_Dotnet_SOAP_GR04\\ec.edu.espe.monster.modelo\\IConversionService.cs",
+              "ToolTip": "C:\\Users\\suqui\\source\\repos\\Servidor_Dotnet_SOAP_GR04\\Servidor_Dotnet_SOAP_GR04\\ec.edu.espe.monster.modelo\\IConversionService.cs",
+              "RelativeToolTip": "Servidor_Dotnet_SOAP_GR04\\ec.edu.espe.monster.modelo\\IConversionService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAA1wAgAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T19:14:19.093Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -12,29 +12,29 @@ import ec.edu.monster.servicios.ConversorUnidadesService;
 @WebService(serviceName = "ConversorService")
 public class ConversorService {
     
-    private final ConversorUnidadesService service = new ConversorUnidadesService();
-    
-    @WebMethod(operationName = "convertirLongitud")
-    public double convertirLongitud(
-            @WebParam(name = "valor") double valor,
-            @WebParam(name = "unidadOrigen") String origen,
-            @WebParam(name = "unidadDestino") String destino) {
-        return service.convertirLongitud(valor, origen, destino);
-    }
-    
-    @WebMethod(operationName = "convertirMasa")
-    public double convertirMasa(
-            @WebParam(name = "valor") double valor,
-            @WebParam(name = "unidadOrigen") String origen,
-            @WebParam(name = "unidadDestino") String destino) {
-        return service.convertirMasa(valor, origen, destino);
-    }
-    
-    @WebMethod(operationName = "convertirTemperatura")
-    public double convertirTemperatura(
-            @WebParam(name = "valor") double valor,
-            @WebParam(name = "unidadOrigen") String origen,
-            @WebParam(name = "unidadDestino") String destino) {
-        return service.convertirTemperatura(valor, origen, destino);
-    }
+        private final ConversorUnidadesService service = new ConversorUnidadesService();
+
+        @WebMethod(operationName = "convertirLongitud")
+        public double convertirLongitud(
+                @WebParam(name = "valor") double valor,
+                @WebParam(name = "unidadOrigen") String origen,
+                @WebParam(name = "unidadDestino") String destino) {
+            return service.convertirLongitud(valor, origen, destino);
+        }
+
+        @WebMethod(operationName = "convertirMasa")
+        public double convertirMasa(
+                @WebParam(name = "valor") double valor,
+                @WebParam(name = "unidadOrigen") String origen,
+                @WebParam(name = "unidadDestino") String destino) {
+            return service.convertirMasa(valor, origen, destino);
+        }
+
+        @WebMethod(operationName = "convertirTemperatura")
+        public double convertirTemperatura(
+                @WebParam(name = "valor") double valor,
+                @WebParam(name = "unidadOrigen") String origen,
+                @WebParam(name = "unidadDestino") String destino) {
+            return service.convertirTemperatura(valor, origen, destino);
+        }
 }

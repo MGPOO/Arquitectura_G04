@@ -20,3 +20,12 @@ rad.json
 *.flf
 #Test results file
 TestResults.xml
+
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.cache
+*.log
+*.vsidx

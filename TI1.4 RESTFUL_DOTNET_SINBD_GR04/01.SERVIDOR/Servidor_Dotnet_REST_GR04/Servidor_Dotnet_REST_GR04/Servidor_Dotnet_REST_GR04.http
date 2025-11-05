@@ -1,0 +1,6 @@
+@Servidor_Dotnet_REST_GR04_HostAddress = http://localhost:5270
+
+GET {{Servidor_Dotnet_REST_GR04_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ConUni_Soap_Dotnet_CliWeb_G04")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+97170676b8b6219a19726d49436b869555c96c74")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+959307ee8812a94a88bb531fdfec35a06dd4f44c")]
 [assembly: System.Reflection.AssemblyProductAttribute("ConUni_Soap_Dotnet_CliWeb_G04")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ConUni_Soap_Dotnet_CliWeb_G04")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

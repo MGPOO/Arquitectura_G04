@@ -1,17 +1,26 @@
-using ConUni_Soap_Dotnet_CliWeb_G04.Services; // <-- tu wrapper SOAP
-// using Microsoft.AspNetCore.Mvc;  // (opcional si usas filtros, etc.)
+using Microsoft.AspNetCore.Authentication.Cookies;
+using ConUni_Soap_Dotnet_CliWeb_G04.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// MVC con vistas
 builder.Services.AddControllersWithViews();
 
-// Registra tu wrapper que llama al servicio SOAP
+// Tu cliente SOAP
 builder.Services.AddSingleton<ConversorSoapClient>();
+
+// ?? Auth por cookies (mínimo viable)
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        options.LoginPath = "/Account/Login";      // dónde te manda si no estás logueado
+        options.LogoutPath = "/Account/Logout";
+        options.AccessDeniedPath = "/Account/Login";
+        options.ExpireTimeSpan = TimeSpan.FromHours(2);
+        options.SlidingExpiration = true;
+    });
 
 var app = builder.Build();
 
-// Manejo de errores y seguridad básica
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
@@ -22,10 +31,12 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-// app.UseAuthorization(); // (déjalo si luego agregas auth)
+
+app.UseAuthentication();   // ?? importante: antes de Authorization
+app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Conversor}/{action=Index}/{id?}"); // ? vamos directo a tu conversor
+    pattern: "{controller=Conversor}/{action=Index}/{id?}");
 
 app.Run();

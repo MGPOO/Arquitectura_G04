@@ -1,114 +1,118 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
-using ConUni_Soap_Dotnet_CliWeb_G04.Services; // Asegúrate de que coincida con tu namespace real
+using ConUni_Soap_Dotnet_CliWeb_G04.Services;
 
 namespace ConUni_Soap_Dotnet_CliWeb_G04.Controllers
 {
+    [Authorize]
     public class ConversorController : Controller
     {
         private readonly ConversorSoapClient _api;
-
-        public ConversorController(ConversorSoapClient api)
-        {
-            _api = api;
-        }
+        public ConversorController(ConversorSoapClient api) => _api = api;
 
         [HttpGet]
-        public IActionResult Index()
-        {
-            return View();
-        }
+        public IActionResult Index() => View();
 
-        // --- CONVERSIONES DE PESO ---
-
+        // ===================== LONGITUD =====================
         [HttpPost]
-        public async Task<IActionResult> KgALibras(double kg)
+        public async Task<IActionResult> ConvertLongitud(double valor, string de, string a)
         {
-            if (kg <= 0)
+            if (!ModelState.IsValid) return View("Index");
+            if (valor <= 0) return Error("Ingresa un número válido mayor que 0 para Longitud.");
+
+            double r;
+            switch ($"{de}->{a}")
             {
-                ViewBag.Error = "Por favor, ingresa un valor válido para kilogramos.";
-                return View("Index");
+                case "Centímetros->Pies": r = await _api.CentimetrosAPiesAsync(valor); break;
+                case "Pies->Centímetros": r = await _api.PiesACentimetrosAsync(valor); break;
+                case "Pulgadas->Centímetros": r = await _api.PulgadasACentimetrosAsync(valor); break;
+                case "Centímetros->Pulgadas": r = await _api.CentimetrosAPulgadasAsync(valor); break;
+                case "Metros->Yardas": r = await _api.MetrosAYardasAsync(valor); break;
+                case "Yardas->Metros": r = await _api.YardasAMetrosAsync(valor); break;
+                default:
+                    ViewBag.Error = "Conversión de Longitud no soportada.";
+                    return View("Index");
             }
 
-            try
-            {
-                double lb = await _api.KgALibrasAsync(kg);
-                ViewBag.ResultadoPeso = $"{kg} kilogramos equivalen a {lb:F2} libras.";
-            }
-            catch (System.Exception ex)
-            {
-                ViewBag.Error = "Error al comunicarse con el servicio SOAP: " + ex.Message;
-            }
-
+            ViewBag.Longitud = $"{valor} {Simbolo(de)} = {r:F4} {Simbolo(a)}";
             return View("Index");
         }
 
+        // ======================= MASA =======================
         [HttpPost]
-        public async Task<IActionResult> LibrasAKg(double lb)
+        public async Task<IActionResult> ConvertMasa(double valor, string de, string a)
         {
-            if (lb <= 0)
+            if (!ModelState.IsValid) return View("Index");
+            if (valor < 0) return Error("La masa no puede ser negativa.");
+
+            double r;
+            switch ($"{de}->{a}")
             {
-                ViewBag.Error = "Por favor, ingresa un valor válido para libras.";
-                return View("Index");
+                case "Kilogramos->Libras": r = await _api.KgALibrasAsync(valor); break;
+                case "Libras->Kilogramos": r = await _api.LibrasAKgAsync(valor); break;
+                case "Gramos->Onzas": r = await _api.GramosAOnzasAsync(valor); break;
+                case "Onzas->Gramos": r = await _api.OnzasAGramosAsync(valor); break;
+                default:
+                    ViewBag.Error = "Conversión de Masa no soportada.";
+                    return View("Index");
             }
 
-            try
-            {
-                double kg = await _api.LibrasAKgAsync(lb);
-                ViewBag.ResultadoPeso = $"{lb} libras equivalen a {kg:F2} kilogramos.";
-            }
-            catch (System.Exception ex)
-            {
-                ViewBag.Error = "Error al comunicarse con el servicio SOAP: " + ex.Message;
-            }
-
+            ViewBag.Masa = $"{valor} {Simbolo(de)} = {r:F4} {Simbolo(a)}";
             return View("Index");
         }
 
-        // --- CONVERSIONES DE DISTANCIA ---
-
+        // ==================== TEMPERATURA ====================
         [HttpPost]
-        public async Task<IActionResult> MetrosAYardas(double metros)
+        public async Task<IActionResult> ConvertTemperatura(double valor, string de, string a)
         {
-            if (metros <= 0)
+            // En temperatura pueden existir negativos, no forzamos > 0
+            double r;
+            switch ($"{de}->{a}")
             {
-                ViewBag.Error = "Por favor, ingresa un valor válido para metros.";
-                return View("Index");
+                case "Celsius->Fahrenheit": r = await _api.CelsiusAFahrenheitAsync(valor); break;
+                case "Fahrenheit->Celsius": r = await _api.FahrenheitACelsiusAsync(valor); break;
+                case "Celsius->Kelvin": r = await _api.CelsiusAKelvinAsync(valor); break;
+                case "Kelvin->Celsius": r = await _api.KelvinACelsiusAsync(valor); break;
+                case "Fahrenheit->Kelvin": r = await _api.FahrenheitAKelvinAsync(valor); break;
+                case "Kelvin->Fahrenheit": r = await _api.KelvinAFahrenheitAsync(valor); break;
+                default:
+                    ViewBag.Error = "Conversión de Temperatura no soportada.";
+                    return View("Index");
             }
 
-            try
-            {
-                double yardas = await _api.MetrosAYardasAsync(metros);
-                ViewBag.ResultadoDistancia = $"{metros} metros equivalen a {yardas:F2} yardas.";
-            }
-            catch (System.Exception ex)
-            {
-                ViewBag.Error = "Error al comunicarse con el servicio SOAP: " + ex.Message;
-            }
-
+            ViewBag.Temperatura = $"{valor} {Simbolo(de)} = {r:F2} {Simbolo(a)}";
             return View("Index");
         }
 
-        [HttpPost]
-        public async Task<IActionResult> CentimetrosAPies(double cm)
+        // ===================== Helpers ======================
+        private IActionResult Error(string msg)
         {
-            if (cm <= 0)
-            {
-                ViewBag.Error = "Por favor, ingresa un valor válido para centímetros.";
-                return View("Index");
-            }
-
-            try
-            {
-                double pies = await _api.CentimetrosAPiesAsync(cm);
-                ViewBag.ResultadoDistancia = $"{cm} cm equivalen a {pies:F2} pies.";
-            }
-            catch (System.Exception ex)
-            {
-                ViewBag.Error = "Error al comunicarse con el servicio SOAP: " + ex.Message;
-            }
-
+            ViewBag.Error = msg;
             return View("Index");
         }
+
+        private static string Simbolo(string unidad) => unidad switch
+        {
+            // Longitud
+            "Centímetros" => "cm",
+            "Pulgadas" => "in",
+            "Pies" => "ft",
+            "Metros" => "m",
+            "Yardas" => "yd",
+
+            // Masa
+            "Kilogramos" => "kg",
+            "Libras" => "lb",
+            "Gramos" => "g",
+            "Onzas" => "oz",
+
+            // Temperatura
+            "Celsius" => "°C",
+            "Fahrenheit" => "°F",
+            "Kelvin" => "K",
+
+            _ => unidad
+        };
     }
 }

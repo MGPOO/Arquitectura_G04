@@ -1,92 +1,148 @@
 ﻿@{
-    ViewData["Title"] = "Conversor SOAP";
+    ViewData["Title"] = "Conversor de Unidades";
 }
 
-<div class="container mt-4">
+<div class="container py-4">
     <h2 class="text-center mb-4">Conversor de Unidades (Cliente Web SOAP)</h2>
+    <div class="row g-4">
 
-    @if (!string.IsNullOrEmpty(ViewBag.Error))
-    {
-        <div class="alert alert-danger text-center">@ViewBag.Error</div>
-    }
+        <!-- LONGITUD -->
+        <div class="col-lg-4">
+            <div class="card p-4 shadow-sm">
+                <h3 class="text-center text-primary mb-3">Longitud</h3>
+                <form asp-action="ConvertLongitud" method="post" id="form-long">
+                    <input class="form-control mb-3" type="number" step="0.01" name="valor" placeholder="Ingrese valor" required />
 
-    <div class="row">
-        <!-- Conversión de Peso -->
-        <div class="col-md-6 mb-4">
-            <div class="card shadow-sm p-4">
-                <h4 class="text-center text-primary">Conversión de Peso</h4>
-                <form asp-action="KgALibras" method="post" class="mb-3">
-                    <div class="mb-3">
-                        <label for="kg" class="form-label">Kilogramos a Libras</label>
-                        <input type="number" step="0.01" name="kg" id="kg" class="form-control" placeholder="Ingrese kilogramos" required />
+                    <div class="mb-2 d-flex align-items-center gap-2">
+                        <label class="fw-semibold">De:</label>
+                        <select class="form-select" name="de" id="long-de"></select>
                     </div>
-                    <button type="submit" class="btn btn-success w-100">Convertir</button>
+                    <div class="mb-3 d-flex align-items-center gap-2">
+                        <label class="fw-semibold">A:</label>
+                        <select class="form-select" name="a" id="long-a"></select>
+                    </div>
+
+                    <button class="btn btn-success w-100">Calcular</button>
                 </form>
 
-                <form asp-action="LibrasAKg" method="post">
-                    <div class="mb-3">
-                        <label for="lb" class="form-label">Libras a Kilogramos</label>
-                        <input type="number" step="0.01" name="lb" id="lb" class="form-control" placeholder="Ingrese libras" required />
-                    </div>
-                    <button type="submit" class="btn btn-secondary w-100">Convertir</button>
-                </form>
-
-                @if (!string.IsNullOrEmpty(ViewBag.ResultadoPeso))
+                @if (!string.IsNullOrEmpty(ViewBag.Longitud))
                 {
-                    <div class="alert alert-info text-center mt-3">
-                        <strong>@ViewBag.ResultadoPeso</strong>
-                    </div>
+                    <div class="alert alert-info text-center mt-3">@ViewBag.Longitud</div>
                 }
             </div>
         </div>
 
-        <!-- Conversión de Distancia -->
-        <div class="col-md-6 mb-4">
-            <div class="card shadow-sm p-4">
-                <h4 class="text-center text-primary">Conversión de Distancia</h4>
-                <form asp-action="MetrosAYardas" method="post" class="mb-3">
-                    <div class="mb-3">
-                        <label for="metros" class="form-label">Metros a Yardas</label>
-                        <input type="number" step="0.01" name="metros" id="metros" class="form-control" placeholder="Ingrese metros" required />
+        <!-- MASA -->
+        <div class="col-lg-4">
+            <div class="card p-4 shadow-sm">
+                <h3 class="text-center text-primary mb-3">Masa</h3>
+                <form asp-action="ConvertMasa" method="post" id="form-masa">
+                    <input class="form-control mb-3" type="number" step="0.01" min="0" name="valor" placeholder="Ingrese valor" required />
+
+                    <div class="mb-2 d-flex align-items-center gap-2">
+                        <label class="fw-semibold">De:</label>
+                        <select class="form-select" name="de" id="masa-de"></select>
                     </div>
-                    <button type="submit" class="btn btn-success w-100">Convertir</button>
+                    <div class="mb-3 d-flex align-items-center gap-2">
+                        <label class="fw-semibold">A:</label>
+                        <select class="form-select" name="a" id="masa-a"></select>
+                    </div>
+
+                    <button class="btn btn-success w-100">Calcular</button>
                 </form>
 
-                <form asp-action="CentimetrosAPies" method="post">
-                    <div class="mb-3">
-                        <label for="cm" class="form-label">Centímetros a Pies</label>
-                        <input type="number" step="0.01" name="cm" id="cm" class="form-control" placeholder="Ingrese centímetros" required />
-                    </div>
-                    <button type="submit" class="btn btn-secondary w-100">Convertir</button>
-                </form>
-
-                @if (!string.IsNullOrEmpty(ViewBag.ResultadoDistancia))
+                @if (!string.IsNullOrEmpty(ViewBag.Masa))
                 {
-                    <div class="alert alert-info text-center mt-3">
-                        <strong>@ViewBag.ResultadoDistancia</strong>
-                    </div>
+                    <div class="alert alert-info text-center mt-3">@ViewBag.Masa</div>
                 }
             </div>
         </div>
+
+        <!-- TEMPERATURA -->
+        <div class="col-lg-4">
+            <div class="card p-4 shadow-sm">
+                <h3 class="text-center text-primary mb-3">Temperatura</h3>
+                <form asp-action="ConvertTemperatura" method="post" id="form-temp">
+                    <input class="form-control mb-3" type="number" step="0.01" name="valor" placeholder="Ingrese valor" required />
+
+                    <div class="mb-2 d-flex align-items-center gap-2">
+                        <label class="fw-semibold">De:</label>
+                        <select class="form-select" name="de" id="temp-de"></select>
+                    </div>
+                    <div class="mb-3 d-flex align-items-center gap-2">
+                        <label class="fw-semibold">A:</label>
+                        <select class="form-select" name="a" id="temp-a"></select>
+                    </div>
+
+                    <button class="btn btn-success w-100">Calcular</button>
+                </form>
+
+                @if (!string.IsNullOrEmpty(ViewBag.Temperatura))
+                {
+                    <div class="alert alert-info text-center mt-3">@ViewBag.Temperatura</div>
+                }
+            </div>
+        </div>
+
     </div>
 </div>
 
-<style>
-    body {
-        background: #f5f7fa;
-        font-family: "Segoe UI", sans-serif;
-    }
+@section Scripts {
+    <script>
+        // === Pares permitidos (según tu WSDL) ===
+        const longPairs = {
+          "Centímetros": ["Pies","Pulgadas"],
+          "Pulgadas": ["Centímetros"],
+          "Pies": ["Centímetros"],
+          "Metros": ["Yardas"],
+          "Yardas": ["Metros"]
+        };
+        const masaPairs = {
+          "Kilogramos": ["Libras"],
+          "Libras": ["Kilogramos"],
+          "Gramos": ["Onzas"],
+          "Onzas": ["Gramos"]
+        };
+        const tempPairs = {
+          "Celsius": ["Fahrenheit","Kelvin"],
+          "Fahrenheit": ["Celsius","Kelvin"],
+          "Kelvin": ["Celsius","Fahrenheit"]
+        };
 
-    .card {
-        border-radius: 1rem;
-        border: none;
-    }
+        // Carga y bloqueo de “misma medida”
+        function setup(formIds, pairs){
+          const fromSel = document.getElementById(formIds.de);
+          const toSel   = document.getElementById(formIds.a);
 
-    h2 {
-        color: #333;
-    }
+          // llena el "De"
+          Object.keys(pairs).forEach(u=>{
+            const op=document.createElement('option'); op.value=u; op.textContent=u; fromSel.appendChild(op);
+          });
 
-    button {
-        font-weight: bold;
-    }
-</style>
+          const fillTo = ()=>{
+            toSel.innerHTML='';
+            (pairs[fromSel.value]||[]).forEach(u=>{
+              const op=document.createElement('option'); op.value=u; op.textContent=u; toSel.appendChild(op);
+            });
+          };
+          fromSel.addEventListener('change', fillTo);
+          fillTo();
+
+          // Validación simple numérica al enviar
+          document.getElementById(formIds.form).addEventListener('submit', (e)=>{
+            const val = e.target.querySelector('input[name="valor"]').value;
+            if(val==='' || isNaN(val)) { e.preventDefault(); alert('Ingrese un número válido.'); }
+          });
+        }
+
+        setup({form:'form-long', de:'long-de', a:'long-a'}, longPairs);
+        setup({form:'form-masa', de:'masa-de', a:'masa-a'}, masaPairs);
+        setup({form:'form-temp', de:'temp-de', a:'temp-a'}, tempPairs);
+    </script>
+    <style>
+        .card {
+            border-radius: 18px;
+            border: none
+        }
+    </style>
+}

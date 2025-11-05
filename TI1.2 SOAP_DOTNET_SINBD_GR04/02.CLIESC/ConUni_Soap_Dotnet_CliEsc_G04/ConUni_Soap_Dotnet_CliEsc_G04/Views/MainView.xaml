@@ -1,0 +1,246 @@
+﻿<Window x:Class="ConUni_Soap_Dotnet_CliEsc_G04.Views.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Conversor SOAP – Escritorio" Height="640" Width="1120"
+        WindowStartupLocation="CenterScreen" Background="#F5F7FA">
+
+    <Window.Resources>
+        <!-- Tarjeta -->
+        <Style x:Key="Card" TargetType="Border">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="CornerRadius" Value="16"/>
+            <Setter Property="Padding" Value="18"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="SnapsToDevicePixels" Value="True"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect Color="#1A000000" BlurRadius="18" ShadowDepth="0" Opacity="0.35"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Botón verde -->
+        <Style x:Key="GreenButton" TargetType="Button">
+            <Setter Property="Background" Value="#198754"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Height" Value="44"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="BorderBrush" Value="#198754"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="8">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Botón Salir (rojo) -->
+        <Style x:Key="DangerButton" TargetType="Button">
+            <Setter Property="Padding" Value="10,6"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="#DC3545"/>
+            <Setter Property="BorderBrush" Value="#DC3545"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="8">
+                            <StackPanel Orientation="Horizontal" Margin="6,0" VerticalAlignment="Center">
+                                <TextBlock Text="&#xE711;" FontFamily="Segoe MDL2 Assets" Margin="0,0,6,0"/>
+                                <ContentPresenter VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#BB2D3B"/>
+                    <Setter Property="BorderBrush" Value="#BB2D3B"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="#9B2330"/>
+                    <Setter Property="BorderBrush" Value="#9B2330"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <!-- Error fuerte -->
+        <Style x:Key="ErrorCallout" TargetType="Border">
+            <Setter Property="CornerRadius" Value="10"/>
+            <Setter Property="Background" Value="#FDECEA"/>
+            <!-- rojo claro -->
+            <Setter Property="BorderBrush" Value="#DC3545"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="Margin" Value="10,10,10,0"/>
+            <Setter Property="SnapsToDevicePixels" Value="True"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect Color="#26000000" BlurRadius="10" ShadowDepth="0" Opacity="0.40"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <DockPanel LastChildFill="True">
+
+        <!-- Header -->
+        <Grid DockPanel.Dock="Top" Margin="10,14,10,12">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Títulos centrados -->
+            <StackPanel Grid.Column="0" HorizontalAlignment="Center">
+                <TextBlock Text="Conversor de Unidades (Cliente de Escritorio SOAP)"
+                           FontSize="24" FontWeight="Bold" Foreground="Black"
+                           TextAlignment="Center"/>
+                <TextBlock x:Name="HolaText" Margin="0,6,0,0" TextAlignment="Center"/>
+            </StackPanel>
+
+            <!-- Salir a la derecha -->
+            <Button Grid.Column="1" Style="{StaticResource DangerButton}"
+                    Content="Salir" VerticalAlignment="Top" Click="OnSalir"
+                    ToolTip="Cerrar sesión y salir" Margin="8,0,0,0"/>
+        </Grid>
+
+        <!-- Cuerpo -->
+        <UniformGrid Columns="3" Margin="16,0,16,16">
+
+            <!-- LONGITUD -->
+            <Border Style="{StaticResource Card}">
+                <StackPanel>
+                    <TextBlock Text="Longitud" FontSize="18" FontWeight="Bold" Foreground="#0D6EFD"
+                               Margin="0,0,0,10" TextAlignment="Center"/>
+
+                    <TextBlock Text="Valor" Margin="10,0,10,4"/>
+                    <TextBox x:Name="LongValor" Height="36" Margin="10"/>
+
+                    <Grid Margin="10,8,10,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="De:" VerticalAlignment="Center" Margin="0,0,8,0"/>
+                        <ComboBox x:Name="LongDe" Grid.Column="1" Height="32"/>
+                    </Grid>
+
+                    <Grid Margin="10,6,10,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="A:" VerticalAlignment="Center" Margin="0,0,8,0"/>
+                        <ComboBox x:Name="LongA" Grid.Column="1" Height="32"/>
+                    </Grid>
+
+                    <Button Content="Calcular" Margin="10,14,10,0" Style="{StaticResource GreenButton}"
+                            Click="OnLongitud"/>
+
+                    <!-- Error Longitud -->
+                    <Border x:Name="LongErrBox" Style="{StaticResource ErrorCallout}" Visibility="Collapsed">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <TextBlock Text="⚠" FontSize="18" FontWeight="Bold" Foreground="#DC3545" Margin="0,0,8,0"/>
+                            <TextBlock x:Name="LongErr" Foreground="#842029" FontSize="13" TextWrapping="Wrap"/>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- Resultado -->
+                    <TextBlock x:Name="LongRes" Margin="12,10,12,0" TextWrapping="Wrap"/>
+                </StackPanel>
+            </Border>
+
+            <!-- MASA -->
+            <Border Style="{StaticResource Card}">
+                <StackPanel>
+                    <TextBlock Text="Masa" FontSize="18" FontWeight="Bold" Foreground="#0D6EFD"
+                               Margin="0,0,0,10" TextAlignment="Center"/>
+
+                    <TextBlock Text="Valor" Margin="10,0,10,4"/>
+                    <TextBox x:Name="MasaValor" Height="36" Margin="10"/>
+
+                    <Grid Margin="10,8,10,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="De:" VerticalAlignment="Center" Margin="0,0,8,0"/>
+                        <ComboBox x:Name="MasaDe" Grid.Column="1" Height="32"/>
+                    </Grid>
+
+                    <Grid Margin="10,6,10,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="A:" VerticalAlignment="Center" Margin="0,0,8,0"/>
+                        <ComboBox x:Name="MasaA" Grid.Column="1" Height="32"/>
+                    </Grid>
+
+                    <Button Content="Calcular" Margin="10,14,10,0" Style="{StaticResource GreenButton}"
+                            Click="OnMasa"/>
+
+                    <!-- Error Masa -->
+                    <Border x:Name="MasaErrBox" Style="{StaticResource ErrorCallout}" Visibility="Collapsed">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <TextBlock Text="⚠" FontSize="18" FontWeight="Bold" Foreground="#DC3545" Margin="0,0,8,0"/>
+                            <TextBlock x:Name="MasaErr" Foreground="#842029" FontSize="13" TextWrapping="Wrap"/>
+                        </StackPanel>
+                    </Border>
+
+                    <TextBlock x:Name="MasaRes" Margin="12,10,12,0" TextWrapping="Wrap"/>
+                </StackPanel>
+            </Border>
+
+            <!-- TEMPERATURA -->
+            <Border Style="{StaticResource Card}">
+                <StackPanel>
+                    <TextBlock Text="Temperatura" FontSize="18" FontWeight="Bold" Foreground="#0D6EFD"
+                               Margin="0,0,0,10" TextAlignment="Center"/>
+
+                    <TextBlock Text="Valor" Margin="10,0,10,4"/>
+                    <TextBox x:Name="TempValor" Height="36" Margin="10"/>
+
+                    <Grid Margin="10,8,10,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="De:" VerticalAlignment="Center" Margin="0,0,8,0"/>
+                        <ComboBox x:Name="TempDe" Grid.Column="1" Height="32"/>
+                    </Grid>
+
+                    <Grid Margin="10,6,10,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="A:" VerticalAlignment="Center" Margin="0,0,8,0"/>
+                        <ComboBox x:Name="TempA" Grid.Column="1" Height="32"/>
+                    </Grid>
+
+                    <Button Content="Calcular" Margin="10,14,10,0" Style="{StaticResource GreenButton}"
+                            Click="OnTemp"/>
+
+                    <!-- Error Temp -->
+                    <Border x:Name="TempErrBox" Style="{StaticResource ErrorCallout}" Visibility="Collapsed">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <TextBlock Text="⚠" FontSize="18" FontWeight="Bold" Foreground="#DC3545" Margin="0,0,8,0"/>
+                            <TextBlock x:Name="TempErr" Foreground="#842029" FontSize="13" TextWrapping="Wrap"/>
+                        </StackPanel>
+                    </Border>
+
+                    <TextBlock x:Name="TempRes" Margin="12,10,12,0" TextWrapping="Wrap"/>
+                </StackPanel>
+            </Border>
+
+        </UniformGrid>
+    </DockPanel>
+</Window>

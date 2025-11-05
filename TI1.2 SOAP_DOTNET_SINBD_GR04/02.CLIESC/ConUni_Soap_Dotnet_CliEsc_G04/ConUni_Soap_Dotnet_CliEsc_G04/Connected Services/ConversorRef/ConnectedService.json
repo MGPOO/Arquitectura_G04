@@ -1,0 +1,16 @@
+{
+  "ExtendedData": {
+    "inputs": [
+      "http://localhost:52091/ec.edu.espe.monster.ws/ConversionService.svc?wsdl"
+    ],
+    "collectionTypes": [
+      "System.Array",
+      "System.Collections.Generic.Dictionary`2"
+    ],
+    "namespaceMappings": [
+      "*, ConversorRef"
+    ],
+    "targetFramework": "net8.0",
+    "typeReuseMode": "All"
+  }
+}

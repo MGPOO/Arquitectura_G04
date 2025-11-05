@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\magvx\\Documents\\8vo\\Arquitectura_G04\\TI1.2 SOAP_DOTNET_SINBD_GR04\\01.SERVIDOR\\Servidor_Dotnet_SOAP_GR04\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A4D8662F-E806-4D32-B9EE-9F69F7D1DA60}|Servidor_Dotnet_SOAP_GR04\\ConUni_Soap_Dotnet_Server_G04.csproj|c:\\users\\magvx\\documents\\8vo\\arquitectura_g04\\ti1.2 soap_dotnet_sinbd_gr04\\01.servidor\\servidor_dotnet_soap_gr04\\servidor_dotnet_soap_gr04\\ec.edu.espe.monster.ws\\conversionservice.svc||{FB9167C9-D3B8-4EDA-8083-9AF6B6F6DA62}",
-      "RelativeMoniker": "D:0:0:{A4D8662F-E806-4D32-B9EE-9F69F7D1DA60}|Servidor_Dotnet_SOAP_GR04\\ConUni_Soap_Dotnet_Server_G04.csproj|solutionrelative:servidor_dotnet_soap_gr04\\ec.edu.espe.monster.ws\\conversionservice.svc||{FB9167C9-D3B8-4EDA-8083-9AF6B6F6DA62}"
+      "AbsoluteMoniker": "D:0:0:{A4D8662F-E806-4D32-B9EE-9F69F7D1DA60}|Servidor_Dotnet_SOAP_GR04\\ConUni_Soap_Dotnet_Server_G04.csproj|C:\\Users\\magvx\\Documents\\8vo\\Arquitectura_G04\\TI1.2 SOAP_DOTNET_SINBD_GR04\\01.SERVIDOR\\Servidor_Dotnet_SOAP_GR04\\servidor_dotnet_soap_gr04\\ec.edu.espe.monster.controlador\\conversionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4D8662F-E806-4D32-B9EE-9F69F7D1DA60}|Servidor_Dotnet_SOAP_GR04\\ConUni_Soap_Dotnet_Server_G04.csproj|solutionrelative:servidor_dotnet_soap_gr04\\ec.edu.espe.monster.controlador\\conversionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A4D8662F-E806-4D32-B9EE-9F69F7D1DA60}|Servidor_Dotnet_SOAP_GR04\\ConUni_Soap_Dotnet_Server_G04.csproj|C:\\Users\\magvx\\Documents\\8vo\\Arquitectura_G04\\TI1.2 SOAP_DOTNET_SINBD_GR04\\01.SERVIDOR\\Servidor_Dotnet_SOAP_GR04\\servidor_dotnet_soap_gr04\\ec.edu.espe.monster.modelo\\iconversionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A4D8662F-E806-4D32-B9EE-9F69F7D1DA60}|Servidor_Dotnet_SOAP_GR04\\ConUni_Soap_Dotnet_Server_G04.csproj|solutionrelative:servidor_dotnet_soap_gr04\\ec.edu.espe.monster.modelo\\iconversionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4D8662F-E806-4D32-B9EE-9F69F7D1DA60}|Servidor_Dotnet_SOAP_GR04\\ConUni_Soap_Dotnet_Server_G04.csproj|c:\\users\\magvx\\documents\\8vo\\arquitectura_g04\\ti1.2 soap_dotnet_sinbd_gr04\\01.servidor\\servidor_dotnet_soap_gr04\\servidor_dotnet_soap_gr04\\ec.edu.espe.monster.ws\\conversionservice.svc||{FB9167C9-D3B8-4EDA-8083-9AF6B6F6DA62}",
+      "RelativeMoniker": "D:0:0:{A4D8662F-E806-4D32-B9EE-9F69F7D1DA60}|Servidor_Dotnet_SOAP_GR04\\ConUni_Soap_Dotnet_Server_G04.csproj|solutionrelative:servidor_dotnet_soap_gr04\\ec.edu.espe.monster.ws\\conversionservice.svc||{FB9167C9-D3B8-4EDA-8083-9AF6B6F6DA62}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A4D8662F-E806-4D32-B9EE-9F69F7D1DA60}|Servidor_Dotnet_SOAP_GR04\\ConUni_Soap_Dotnet_Server_G04.csproj|C:\\Users\\magvx\\Documents\\8vo\\Arquitectura_G04\\TI1.2 SOAP_DOTNET_SINBD_GR04\\01.SERVIDOR\\Servidor_Dotnet_SOAP_GR04\\servidor_dotnet_soap_gr04\\web.debug.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
@@ -21,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A4D8662F-E806-4D32-B9EE-9F69F7D1DA60}|Servidor_Dotnet_SOAP_GR04\\Servidor_Dotnet_SOAP_GR04.csproj|C:\\Users\\magvx\\Documents\\8vo\\Arquitectura_G04\\TI1.2 SOAP_DOTNET_SINBD_GR04\\01.SERVIDOR\\Servidor_Dotnet_SOAP_GR04\\servidor_dotnet_soap_gr04\\ec.edu.espe.monster.ws\\conversionservice.svc||{FB9167C9-D3B8-4EDA-8083-9AF6B6F6DA62}",
       "RelativeMoniker": "D:0:0:{A4D8662F-E806-4D32-B9EE-9F69F7D1DA60}|Servidor_Dotnet_SOAP_GR04\\Servidor_Dotnet_SOAP_GR04.csproj|solutionrelative:servidor_dotnet_soap_gr04\\ec.edu.espe.monster.ws\\conversionservice.svc||{FB9167C9-D3B8-4EDA-8083-9AF6B6F6DA62}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A4D8662F-E806-4D32-B9EE-9F69F7D1DA60}|Servidor_Dotnet_SOAP_GR04\\ConUni_Soap_Dotnet_Server_G04.csproj|C:\\Users\\magvx\\Documents\\8vo\\Arquitectura_G04\\TI1.2 SOAP_DOTNET_SINBD_GR04\\01.SERVIDOR\\Servidor_Dotnet_SOAP_GR04\\servidor_dotnet_soap_gr04\\ec.edu.espe.monster.controlador\\conversionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A4D8662F-E806-4D32-B9EE-9F69F7D1DA60}|Servidor_Dotnet_SOAP_GR04\\ConUni_Soap_Dotnet_Server_G04.csproj|solutionrelative:servidor_dotnet_soap_gr04\\ec.edu.espe.monster.controlador\\conversionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A4D8662F-E806-4D32-B9EE-9F69F7D1DA60}|Servidor_Dotnet_SOAP_GR04\\ConUni_Soap_Dotnet_Server_G04.csproj|C:\\Users\\magvx\\Documents\\8vo\\Arquitectura_G04\\TI1.2 SOAP_DOTNET_SINBD_GR04\\01.SERVIDOR\\Servidor_Dotnet_SOAP_GR04\\servidor_dotnet_soap_gr04\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -46,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -55,10 +55,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",
@@ -80,13 +76,14 @@
               "RelativeDocumentMoniker": "Servidor_Dotnet_SOAP_GR04\\ec.edu.espe.monster.modelo\\IConversionService.cs",
               "ToolTip": "C:\\Users\\magvx\\Documents\\8vo\\Arquitectura_G04\\TI1.2 SOAP_DOTNET_SINBD_GR04\\01.SERVIDOR\\Servidor_Dotnet_SOAP_GR04\\Servidor_Dotnet_SOAP_GR04\\ec.edu.espe.monster.modelo\\IConversionService.cs",
               "RelativeToolTip": "Servidor_Dotnet_SOAP_GR04\\ec.edu.espe.monster.modelo\\IConversionService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABJAAAAAAAAAA==",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAqwAgAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-04T22:25:26.146Z"
+              "WhenOpened": "2025-11-04T22:25:26.146Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Web.Release.config",
               "DocumentMoniker": "C:\\Users\\magvx\\Documents\\8vo\\Arquitectura_G04\\TI1.2 SOAP_DOTNET_SINBD_GR04\\01.SERVIDOR\\Servidor_Dotnet_SOAP_GR04\\Servidor_Dotnet_SOAP_GR04\\Web.Release.config",
               "RelativeDocumentMoniker": "Servidor_Dotnet_SOAP_GR04\\Web.Release.config",
@@ -98,7 +95,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "ConversionService.svc",
               "DocumentMoniker": "C:\\Users\\magvx\\Documents\\8vo\\Arquitectura_G04\\TI1.2 SOAP_DOTNET_SINBD_GR04\\01.SERVIDOR\\Servidor_Dotnet_SOAP_GR04\\Servidor_Dotnet_SOAP_GR04\\ec.edu.espe.monster.ws\\ConversionService.svc",
               "RelativeDocumentMoniker": "Servidor_Dotnet_SOAP_GR04\\ec.edu.espe.monster.ws\\ConversionService.svc",
@@ -111,7 +108,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Web.Debug.config",
               "DocumentMoniker": "C:\\Users\\magvx\\Documents\\8vo\\Arquitectura_G04\\TI1.2 SOAP_DOTNET_SINBD_GR04\\01.SERVIDOR\\Servidor_Dotnet_SOAP_GR04\\Servidor_Dotnet_SOAP_GR04\\Web.Debug.config",
               "RelativeDocumentMoniker": "Servidor_Dotnet_SOAP_GR04\\Web.Debug.config",
@@ -123,7 +120,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "ConversionService.svc",
               "DocumentMoniker": "C:\\Users\\magvx\\Documents\\8vo\\Arquitectura_G04\\TI1.2 SOAP_DOTNET_SINBD_GR04\\01.SERVIDOR\\Servidor_Dotnet_SOAP_GR04\\Servidor_Dotnet_SOAP_GR04\\ec.edu.espe.monster.ws\\ConversionService.svc",
               "RelativeDocumentMoniker": "Servidor_Dotnet_SOAP_GR04\\ec.edu.espe.monster.ws\\ConversionService.svc",
@@ -135,7 +132,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "ConversionService.cs",
               "DocumentMoniker": "C:\\Users\\magvx\\Documents\\8vo\\Arquitectura_G04\\TI1.2 SOAP_DOTNET_SINBD_GR04\\01.SERVIDOR\\Servidor_Dotnet_SOAP_GR04\\Servidor_Dotnet_SOAP_GR04\\ec.edu.espe.monster.controlador\\ConversionService.cs",
               "RelativeDocumentMoniker": "Servidor_Dotnet_SOAP_GR04\\ec.edu.espe.monster.controlador\\ConversionService.cs",
@@ -143,7 +140,12 @@
               "RelativeToolTip": "Servidor_Dotnet_SOAP_GR04\\ec.edu.espe.monster.controlador\\ConversionService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-21T19:20:30.638Z"
+              "WhenOpened": "2025-10-21T19:20:30.638Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",

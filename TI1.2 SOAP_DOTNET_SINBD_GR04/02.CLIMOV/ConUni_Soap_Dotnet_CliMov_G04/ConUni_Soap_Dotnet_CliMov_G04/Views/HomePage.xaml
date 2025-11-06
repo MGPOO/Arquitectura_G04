@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ConUni_Soap_Dotnet_CliMov_G04.Views.HomePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    NavigationPage.HasNavigationBar="False"
+    BackgroundColor="#FFFFFF">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="0">
+
+            <!-- Barra superior -->
+            <Grid BackgroundColor="{StaticResource Primary}"
+                  Padding="16,10"
+                  ColumnDefinitions="*,Auto">
+
+                <Label Text="Conversor"
+                       FontAttributes="Bold"
+                       FontSize="18"
+                       TextColor="{StaticResource White}"
+                       VerticalOptions="Center" />
+
+                <Button Text="Cerrar sesión"
+                        Grid.Column="1"
+                        Style="{StaticResource PrimaryRedButtonStyle}"
+                        Clicked="OnLogoutClicked"
+                        Padding="12,4"
+                        Margin="0,0,0,0"
+                        VerticalOptions="Center"
+                        HorizontalOptions="End" />
+            </Grid>
+
+            <!-- Contenido principal -->
+            <VerticalStackLayout Padding="16" Spacing="16">
+
+                <!-- Título -->
+                <Label Text="Conversor de Unidades (Servicio SOAP)"
+                       FontSize="22"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       TextColor="{StaticResource Primary}" />
+
+                <!-- Longitud -->
+                <Border Style="{StaticResource CardBorderStyle}">
+                    <VerticalStackLayout Spacing="10">
+
+                        <Label Text="Longitud"
+                               Style="{StaticResource CardTitleStyle}" />
+
+                        <Entry x:Name="entryLenValue"
+                               Keyboard="Numeric"
+                               Placeholder="Ingrese valor" />
+
+                        <Grid ColumnDefinitions="Auto,*"
+                              RowDefinitions="Auto,Auto"
+                              ColumnSpacing="12"
+                              RowSpacing="10">
+
+                            <Label Text="De:" Grid.Row="0" Grid.Column="0"
+                                   VerticalTextAlignment="Center" />
+                            <Picker x:Name="pickerLenFrom"
+                                    Grid.Row="0" Grid.Column="1"
+                                    Title="Seleccione unidad"
+                                    SelectedIndexChanged="OnLenFromChanged" />
+
+                            <Label Text="A:" Grid.Row="1" Grid.Column="0"
+                                   VerticalTextAlignment="Center" />
+                            <Picker x:Name="pickerLenTo"
+                                    Grid.Row="1" Grid.Column="1"
+                                    Title="Seleccione unidad" />
+                        </Grid>
+
+                        <Button Text="Calcular"
+                                Style="{StaticResource PrimaryGreenButtonStyle}"
+                                Clicked="OnCalcLengthClicked" />
+
+                        <Label x:Name="lblLenResult"
+                               FontAttributes="Bold"
+                               HorizontalOptions="Center"
+                               TextColor="{StaticResource Primary}" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Masa -->
+                <Border Style="{StaticResource CardBorderStyle}">
+                    <VerticalStackLayout Spacing="10">
+
+                        <Label Text="Masa"
+                               Style="{StaticResource CardTitleStyle}" />
+
+                        <Entry x:Name="entryMassValue"
+                               Keyboard="Numeric"
+                               Placeholder="Ingrese valor" />
+
+                        <Grid ColumnDefinitions="Auto,*"
+                              RowDefinitions="Auto,Auto"
+                              ColumnSpacing="12"
+                              RowSpacing="10">
+
+                            <Label Text="De:" Grid.Row="0" Grid.Column="0"
+                                   VerticalTextAlignment="Center" />
+                            <Picker x:Name="pickerMassFrom"
+                                    Grid.Row="0" Grid.Column="1"
+                                    Title="Seleccione unidad"
+                                    SelectedIndexChanged="OnMassFromChanged" />
+
+                            <Label Text="A:" Grid.Row="1" Grid.Column="0"
+                                   VerticalTextAlignment="Center" />
+                            <Picker x:Name="pickerMassTo"
+                                    Grid.Row="1" Grid.Column="1"
+                                    Title="Seleccione unidad" />
+                        </Grid>
+
+                        <Button Text="Calcular"
+                                Style="{StaticResource PrimaryGreenButtonStyle}"
+                                Clicked="OnCalcMassClicked" />
+
+                        <Label x:Name="lblMassResult"
+                               FontAttributes="Bold"
+                               HorizontalOptions="Center"
+                               TextColor="{StaticResource Primary}" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Temperatura -->
+                <Border Style="{StaticResource CardBorderStyle}">
+                    <VerticalStackLayout Spacing="10">
+
+                        <Label Text="Temperatura"
+                               Style="{StaticResource CardTitleStyle}" />
+
+                        <Entry x:Name="entryTempValue"
+                               Keyboard="Numeric"
+                               Placeholder="Ingrese valor" />
+
+                        <Grid ColumnDefinitions="Auto,*"
+                              RowDefinitions="Auto,Auto"
+                              ColumnSpacing="12"
+                              RowSpacing="10">
+
+                            <Label Text="De:" Grid.Row="0" Grid.Column="0"
+                                   VerticalTextAlignment="Center" />
+                            <Picker x:Name="pickerTempFrom"
+                                    Grid.Row="0" Grid.Column="1"
+                                    Title="Seleccione unidad"
+                                    SelectedIndexChanged="OnTempFromChanged" />
+
+                            <Label Text="A:" Grid.Row="1" Grid.Column="0"
+                                   VerticalTextAlignment="Center" />
+                            <Picker x:Name="pickerTempTo"
+                                    Grid.Row="1" Grid.Column="1"
+                                    Title="Seleccione unidad" />
+                        </Grid>
+
+                        <Button Text="Calcular"
+                                Style="{StaticResource PrimaryGreenButtonStyle}"
+                                Clicked="OnCalcTempClicked" />
+
+                        <Label x:Name="lblTempResult"
+                               FontAttributes="Bold"
+                               HorizontalOptions="Center"
+                               TextColor="{StaticResource Primary}" />
+                    </VerticalStackLayout>
+                </Border>
+
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

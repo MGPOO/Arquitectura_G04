@@ -1,0 +1,61 @@
+<ContentPage
+    x:Class="ConUni_Soap_Dotnet_CliMov_G04.Views.LoginPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Iniciar Sesión"
+    BackgroundColor="#F5F6F8">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="24" Spacing="24">
+
+            <!-- Logo -->
+            <Image Source="liga_logo.png"
+                   HeightRequest="120"
+                   HorizontalOptions="Center"
+                   Aspect="AspectFit"
+                   Margin="0,20,0,10" />
+
+            <!-- Título -->
+            <Label Text="Iniciar Sesión"
+                   FontSize="22"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="{StaticResource Primary}" />
+
+            <!-- Contenedor blanco -->
+            <Border
+                StrokeThickness="0"
+                BackgroundColor="#FFFFFF"
+                StrokeShape="RoundRectangle 18"
+                Padding="20">
+
+                <VerticalStackLayout Spacing="14">
+
+                    <Entry x:Name="UserEntry"
+                           Placeholder="Usuario"
+                           PlaceholderColor="#9CA3AF"
+                           TextColor="#000000"
+                           BackgroundColor="#FFFFFF" />
+
+                    <Entry x:Name="PassEntry"
+                           Placeholder="Contraseña"
+                           PlaceholderColor="#9CA3AF"
+                           TextColor="#000000"
+                           IsPassword="True"
+                           BackgroundColor="#FFFFFF" />
+
+                    <Button Text="Ingresar"
+                            Style="{StaticResource PrimaryGreenButtonStyle}"
+                            Clicked="OnLoginClicked" />
+
+                    <Label x:Name="ErrorLabel"
+                           Text=""
+                           TextColor="Red"
+                           FontSize="13"
+                           HorizontalOptions="Center"
+                           Margin="0,4,0,0" />
+                </VerticalStackLayout>
+            </Border>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

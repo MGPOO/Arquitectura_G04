@@ -1,0 +1,164 @@
+﻿@{
+    ViewData["Title"] = "Conversor";
+    string[] L = new[] { "Centímetros", "Pies", "Pulgadas", "Metros", "Yardas" };
+    string[] M = new[] { "Kilogramos", "Libras", "Gramos", "Onzas" };
+    string[] T = new[] { "Celsius", "Fahrenheit", "Kelvin" };
+}
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">@TempData["Error"]</div>
+}
+@if (TempData["Ok"] != null)
+{
+    <div class="alert alert-success white-space-pre">@TempData["Ok"]</div>
+}
+
+<div class="row g-4">
+    <!-- Longitud -->
+    <div class="col-12 col-lg-4">
+        <div class="card shadow-sm h-100">
+            <div class="card-body">
+                <h4 class="text-center text-primary mb-3">Longitud</h4>
+                <form asp-action="Convert" method="post" class="conv-form" data-category="longitud" data-allowneg="false">
+                    <input type="hidden" name="categoria" value="longitud" />
+                    <div class="mb-3">
+                        <label class="form-label">Ingrese valor</label>
+                        <input name="valor" class="form-control only-number" inputmode="decimal" required />
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label">De:</label>
+                        <select name="de" class="form-select sel-de" required>
+                            @foreach (var u in L)
+                            {
+                                <option>@u</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label">A:</label>
+                        <select name="a" class="form-select sel-a" required>
+                            @foreach (var u in L)
+                            {
+                                <option>@u</option>
+                            }
+                        </select>
+                    </div>
+                    <button class="btn btn-success w-100 btn-lg">Calcular</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Masa -->
+    <div class="col-12 col-lg-4">
+        <div class="card shadow-sm h-100">
+            <div class="card-body">
+                <h4 class="text-center text-primary mb-3">Masa</h4>
+                <form asp-action="Convert" method="post" class="conv-form" data-category="masa" data-allowneg="false">
+                    <input type="hidden" name="categoria" value="masa" />
+                    <div class="mb-3">
+                        <label class="form-label">Ingrese valor</label>
+                        <input name="valor" class="form-control only-number" inputmode="decimal" required />
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label">De:</label>
+                        <select name="de" class="form-select sel-de" required>
+                            @foreach (var u in M)
+                            {
+                                <option>@u</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label">A:</label>
+                        <select name="a" class="form-select sel-a" required>
+                            @foreach (var u in M)
+                            {
+                                <option>@u</option>
+                            }
+                        </select>
+                    </div>
+                    <button class="btn btn-success w-100 btn-lg">Calcular</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Temperatura -->
+    <div class="col-12 col-lg-4">
+        <div class="card shadow-sm h-100">
+            <div class="card-body">
+                <h4 class="text-center text-primary mb-3">Temperatura</h4>
+                <form asp-action="Convert" method="post" class="conv-form" data-category="temperatura" data-allowneg="true">
+                    <input type="hidden" name="categoria" value="temperatura" />
+                    <div class="mb-3">
+                        <label class="form-label">Ingrese valor</label>
+                        <input name="valor" class="form-control only-number" inputmode="decimal" required />
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label">De:</label>
+                        <select name="de" class="form-select sel-de" required>
+                            @foreach (var u in T)
+                            {
+                                <option>@u</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label">A:</label>
+                        <select name="a" class="form-select sel-a" required>
+                            @foreach (var u in T)
+                            {
+                                <option>@u</option>
+                            }
+                        </select>
+                    </div>
+                    <button class="btn btn-success w-100 btn-lg">Calcular</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // evita mismo 'De' y 'A'
+        document.querySelectorAll('.conv-form').forEach(form => {
+          const de = form.querySelector('.sel-de');
+          const a  = form.querySelector('.sel-a');
+
+          const sync = () => {
+            [...a.options].forEach(opt => opt.disabled = (opt.value === de.value));
+            if (a.value === de.value) {
+              const first = [...a.options].find(o => !o.disabled);
+              if (first) a.value = first.value;
+            }
+          };
+          de.addEventListener('change', sync);
+          sync();
+
+          // validación numérica
+          form.addEventListener('submit', (e) => {
+            const allowNeg = form.dataset.allowneg === 'true';
+            const input = form.querySelector('.only-number');
+            const raw = (input.value || '').trim().replace(',', '.');
+            const num = Number(raw);
+
+            const isNum = raw !== '' && !Number.isNaN(num) && Number.isFinite(num);
+            if (!isNum || (!allowNeg && num < 0)) {
+              e.preventDefault();
+              alert(allowNeg
+                ? 'Ingresa un número válido (puede ser negativo). Usa punto decimal.'
+                : 'Ingresa un número válido mayor o igual a 0. Usa punto decimal.');
+              input.focus();
+            } else {
+              input.value = raw; // normaliza a punto
+            }
+          });
+        });
+
+        // ayuda visual para preservar saltos de línea en TempData["Ok"]
+        document.querySelectorAll('.white-space-pre')?.forEach(el => el.style.whiteSpace='pre-wrap');
+    </script>
+}

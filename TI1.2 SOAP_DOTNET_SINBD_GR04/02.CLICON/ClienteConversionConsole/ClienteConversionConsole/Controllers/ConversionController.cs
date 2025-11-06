@@ -24,8 +24,9 @@ namespace ClienteConversionConsoleMvc.Controllers
                 Console.Clear();
                 _view.ShowLigaLogoLDU(60);
                 _view.Write("-------------------------------------------\n");
-                _view.WriteInfo("Autenticación - Cliente ConversionService");
+                _view.WriteInfo("Conversor SOAP Dotnet G04");
                 _view.Write("-------------------------------------------\n");
+                _view.WriteInfo("Iniciar Sesión");
 
                 _view.Write("Usuario: ");
                 string u = Console.ReadLine() ?? "";
@@ -56,7 +57,7 @@ namespace ClienteConversionConsoleMvc.Controllers
         {
             while (true)
             {
-                _view.DrawHeader("Cliente MVC - Conversiones");
+                _view.DrawHeader("Conversor de Unidades (Cliente Consola SOAP)");
                 _view.DrawMenu(new[]
                 {
                     "Longitud (cm, ft, m, yd, in)",

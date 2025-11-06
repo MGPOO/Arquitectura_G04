@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConUni_Rest_Dotnet_CliWeb_G04", "ConUni_Rest_Dotnet_CliWeb_G04\ConUni_Rest_Dotnet_CliWeb_G04.csproj", "{7525D09E-E4DD-41B1-A41D-809D7255005D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7525D09E-E4DD-41B1-A41D-809D7255005D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7525D09E-E4DD-41B1-A41D-809D7255005D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7525D09E-E4DD-41B1-A41D-809D7255005D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7525D09E-E4DD-41B1-A41D-809D7255005D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B1D4E7FC-E6C1-48D1-AA44-248772AFF1FC}
+	EndGlobalSection
+EndGlobal

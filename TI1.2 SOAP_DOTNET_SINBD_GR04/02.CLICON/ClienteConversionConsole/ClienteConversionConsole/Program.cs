@@ -13,7 +13,7 @@ namespace ClienteConversionConsoleMvc
         static void Main()
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
-            Console.Title = "Cliente MVC - Conversiones";
+            Console.Title = "Conversor Soap Dotnet (Cliente Consola)";
 
             var model = new ConversionModel();
             var view = new ConsoleView();

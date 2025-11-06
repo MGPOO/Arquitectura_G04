@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\magvx\\Documents\\8vo\\Arquitectura_G04\\TI1.2 SOAP_DOTNET_SINBD_GR04\\02.CLIWEB\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C17F0C1E-3E66-4A8F-ADEC-171F4663C91E}|ConUni_Soap_Dotnet_CliWeb_G04\\ConUni_Soap_Dotnet_CliWeb_G04.csproj|c:\\users\\magvx\\documents\\8vo\\arquitectura_g04\\ti1.2 soap_dotnet_sinbd_gr04\\02.cliweb\\conuni_soap_dotnet_cliweb_g04\\views\\conversor\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C17F0C1E-3E66-4A8F-ADEC-171F4663C91E}|ConUni_Soap_Dotnet_CliWeb_G04\\ConUni_Soap_Dotnet_CliWeb_G04.csproj|solutionrelative:conuni_soap_dotnet_cliweb_g04\\views\\conversor\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C17F0C1E-3E66-4A8F-ADEC-171F4663C91E}|ConUni_Soap_Dotnet_CliWeb_G04\\ConUni_Soap_Dotnet_CliWeb_G04.csproj|c:\\users\\magvx\\documents\\8vo\\arquitectura_g04\\ti1.2 soap_dotnet_sinbd_gr04\\02.cliweb\\conuni_soap_dotnet_cliweb_g04\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C17F0C1E-3E66-4A8F-ADEC-171F4663C91E}|ConUni_Soap_Dotnet_CliWeb_G04\\ConUni_Soap_Dotnet_CliWeb_G04.csproj|solutionrelative:conuni_soap_dotnet_cliweb_g04\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -11,20 +15,16 @@
       "RelativeMoniker": "D:0:0:{C17F0C1E-3E66-4A8F-ADEC-171F4663C91E}|ConUni_Soap_Dotnet_CliWeb_G04\\ConUni_Soap_Dotnet_CliWeb_G04.csproj|solutionrelative:conuni_soap_dotnet_cliweb_g04\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{C17F0C1E-3E66-4A8F-ADEC-171F4663C91E}|ConUni_Soap_Dotnet_CliWeb_G04\\ConUni_Soap_Dotnet_CliWeb_G04.csproj|c:\\users\\magvx\\documents\\8vo\\arquitectura_g04\\ti1.2 soap_dotnet_sinbd_gr04\\02.cliweb\\conuni_soap_dotnet_cliweb_g04\\services\\conversorsoapclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17F0C1E-3E66-4A8F-ADEC-171F4663C91E}|ConUni_Soap_Dotnet_CliWeb_G04\\ConUni_Soap_Dotnet_CliWeb_G04.csproj|solutionrelative:conuni_soap_dotnet_cliweb_g04\\services\\conversorsoapclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C17F0C1E-3E66-4A8F-ADEC-171F4663C91E}|ConUni_Soap_Dotnet_CliWeb_G04\\ConUni_Soap_Dotnet_CliWeb_G04.csproj|c:\\users\\magvx\\documents\\8vo\\arquitectura_g04\\ti1.2 soap_dotnet_sinbd_gr04\\02.cliweb\\conuni_soap_dotnet_cliweb_g04\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C17F0C1E-3E66-4A8F-ADEC-171F4663C91E}|ConUni_Soap_Dotnet_CliWeb_G04\\ConUni_Soap_Dotnet_CliWeb_G04.csproj|solutionrelative:conuni_soap_dotnet_cliweb_g04\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C17F0C1E-3E66-4A8F-ADEC-171F4663C91E}|ConUni_Soap_Dotnet_CliWeb_G04\\ConUni_Soap_Dotnet_CliWeb_G04.csproj|c:\\users\\magvx\\documents\\8vo\\arquitectura_g04\\ti1.2 soap_dotnet_sinbd_gr04\\02.cliweb\\conuni_soap_dotnet_cliweb_g04\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C17F0C1E-3E66-4A8F-ADEC-171F4663C91E}|ConUni_Soap_Dotnet_CliWeb_G04\\ConUni_Soap_Dotnet_CliWeb_G04.csproj|solutionrelative:conuni_soap_dotnet_cliweb_g04\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C17F0C1E-3E66-4A8F-ADEC-171F4663C91E}|ConUni_Soap_Dotnet_CliWeb_G04\\ConUni_Soap_Dotnet_CliWeb_G04.csproj|c:\\users\\magvx\\documents\\8vo\\arquitectura_g04\\ti1.2 soap_dotnet_sinbd_gr04\\02.cliweb\\conuni_soap_dotnet_cliweb_g04\\views\\conversor\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C17F0C1E-3E66-4A8F-ADEC-171F4663C91E}|ConUni_Soap_Dotnet_CliWeb_G04\\ConUni_Soap_Dotnet_CliWeb_G04.csproj|solutionrelative:conuni_soap_dotnet_cliweb_g04\\views\\conversor\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C17F0C1E-3E66-4A8F-ADEC-171F4663C91E}|ConUni_Soap_Dotnet_CliWeb_G04\\ConUni_Soap_Dotnet_CliWeb_G04.csproj|c:\\users\\magvx\\documents\\8vo\\arquitectura_g04\\ti1.2 soap_dotnet_sinbd_gr04\\02.cliweb\\conuni_soap_dotnet_cliweb_g04\\services\\conversorsoapclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C17F0C1E-3E66-4A8F-ADEC-171F4663C91E}|ConUni_Soap_Dotnet_CliWeb_G04\\ConUni_Soap_Dotnet_CliWeb_G04.csproj|solutionrelative:conuni_soap_dotnet_cliweb_g04\\services\\conversorsoapclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C17F0C1E-3E66-4A8F-ADEC-171F4663C91E}|ConUni_Soap_Dotnet_CliWeb_G04\\ConUni_Soap_Dotnet_CliWeb_G04.csproj|c:\\users\\magvx\\documents\\8vo\\arquitectura_g04\\ti1.2 soap_dotnet_sinbd_gr04\\02.cliweb\\conuni_soap_dotnet_cliweb_g04\\controllers\\conversorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -49,7 +49,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -65,33 +65,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\magvx\\Documents\\8vo\\Arquitectura_G04\\TI1.2 SOAP_DOTNET_SINBD_GR04\\02.CLIWEB\\ConUni_Soap_Dotnet_CliWeb_G04\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "ConUni_Soap_Dotnet_CliWeb_G04\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\magvx\\Documents\\8vo\\Arquitectura_G04\\TI1.2 SOAP_DOTNET_SINBD_GR04\\02.CLIWEB\\ConUni_Soap_Dotnet_CliWeb_G04\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "ConUni_Soap_Dotnet_CliWeb_G04\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAgwBEAAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAgwBYAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-11-05T00:02:03.893Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\magvx\\Documents\\8vo\\Arquitectura_G04\\TI1.2 SOAP_DOTNET_SINBD_GR04\\02.CLIWEB\\ConUni_Soap_Dotnet_CliWeb_G04\\Views\\Login\\Index.cshtml",
               "RelativeDocumentMoniker": "ConUni_Soap_Dotnet_CliWeb_G04\\Views\\Login\\Index.cshtml",
               "ToolTip": "C:\\Users\\magvx\\Documents\\8vo\\Arquitectura_G04\\TI1.2 SOAP_DOTNET_SINBD_GR04\\02.CLIWEB\\ConUni_Soap_Dotnet_CliWeb_G04\\Views\\Login\\Index.cshtml",
               "RelativeToolTip": "ConUni_Soap_Dotnet_CliWeb_G04\\Views\\Login\\Index.cshtml",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAUwA0AAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-11-05T00:01:27.785Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\Users\\magvx\\Documents\\8vo\\Arquitectura_G04\\TI1.2 SOAP_DOTNET_SINBD_GR04\\02.CLIWEB\\ConUni_Soap_Dotnet_CliWeb_G04\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "ConUni_Soap_Dotnet_CliWeb_G04\\Controllers\\AccountController.cs",
@@ -103,15 +103,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\magvx\\Documents\\8vo\\Arquitectura_G04\\TI1.2 SOAP_DOTNET_SINBD_GR04\\02.CLIWEB\\ConUni_Soap_Dotnet_CliWeb_G04\\Views\\Conversor\\Index.cshtml",
               "RelativeDocumentMoniker": "ConUni_Soap_Dotnet_CliWeb_G04\\Views\\Conversor\\Index.cshtml",
               "ToolTip": "C:\\Users\\magvx\\Documents\\8vo\\Arquitectura_G04\\TI1.2 SOAP_DOTNET_SINBD_GR04\\02.CLIWEB\\ConUni_Soap_Dotnet_CliWeb_G04\\Views\\Conversor\\Index.cshtml",
               "RelativeToolTip": "ConUni_Soap_Dotnet_CliWeb_G04\\Views\\Conversor\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABOAAAAAAAAAA==",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAgwJQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-21T07:20:16.321Z"
+              "WhenOpened": "2025-10-21T07:20:16.321Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -139,7 +140,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\magvx\\Documents\\8vo\\Arquitectura_G04\\TI1.2 SOAP_DOTNET_SINBD_GR04\\02.CLIWEB\\ConUni_Soap_Dotnet_CliWeb_G04\\Program.cs",
               "RelativeDocumentMoniker": "ConUni_Soap_Dotnet_CliWeb_G04\\Program.cs",
@@ -147,12 +148,11 @@
               "RelativeToolTip": "ConUni_Soap_Dotnet_CliWeb_G04\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-21T06:44:42.979Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-21T06:44:42.979Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "ConversorSoapClient.cs",
               "DocumentMoniker": "C:\\Users\\magvx\\Documents\\8vo\\Arquitectura_G04\\TI1.2 SOAP_DOTNET_SINBD_GR04\\02.CLIWEB\\ConUni_Soap_Dotnet_CliWeb_G04\\Services\\ConversorSoapClient.cs",
               "RelativeDocumentMoniker": "ConUni_Soap_Dotnet_CliWeb_G04\\Services\\ConversorSoapClient.cs",
@@ -160,7 +160,8 @@
               "RelativeToolTip": "ConUni_Soap_Dotnet_CliWeb_G04\\Services\\ConversorSoapClient.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAB2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-21T06:43:38.994Z"
+              "WhenOpened": "2025-10-21T06:43:38.994Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

@@ -63,7 +63,6 @@ namespace ClienteConversionConsoleMvc.Controllers
                     "Longitud (cm, ft, m, yd, in)",
                     "Masa (kg, lb, g, oz)",
                     "Temperatura (°C, °F, K)",
-                    "Pruebas rápidas (demo)",
                     "Salir"
                 });
 

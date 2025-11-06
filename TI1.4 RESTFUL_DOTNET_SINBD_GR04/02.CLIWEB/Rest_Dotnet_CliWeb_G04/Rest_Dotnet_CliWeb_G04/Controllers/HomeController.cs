@@ -1,8 +1,8 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using ConUni_Rest_Dotnet_CliWeb_G04.Models;
+using Rest_Dotnet_CliWeb_G04.Models;
 
-namespace ConUni_Rest_Dotnet_CliWeb_G04.Controllers;
+namespace Rest_Dotnet_CliWeb_G04.Controllers;
 
 public class HomeController : Controller
 {

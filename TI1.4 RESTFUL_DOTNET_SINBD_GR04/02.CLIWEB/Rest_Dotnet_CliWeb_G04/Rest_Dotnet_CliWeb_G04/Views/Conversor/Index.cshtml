@@ -1,0 +1,148 @@
+﻿@{
+    ViewData["Title"] = "Conversor de Unidades (Cliente Web REST)";
+}
+
+<div class="container py-4">
+    <h2 class="text-center mb-4">Conversor de Unidades (Cliente Web REST)</h2>
+
+    <div class="row g-4">
+
+        <!-- LONGITUD -->
+        <div class="col-lg-4">
+            <div class="card p-4 shadow-sm" style="border-radius:18px;border:none;">
+                <h3 class="text-center text-primary mb-3">Longitud</h3>
+
+                <form asp-action="Convertir" method="post" id="form-long">
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" name="category" value="length" />
+
+                    <input class="form-control mb-3" type="number" step="0.01" name="valor" placeholder="Ingrese valor" required />
+
+                    <div class="mb-2 d-flex align-items-center gap-2">
+                        <label class="fw-semibold">De:</label>
+                        <select class="form-select" name="from" id="long-de"></select>
+                    </div>
+
+                    <div class="mb-3 d-flex align-items-center gap-2">
+                        <label class="fw-semibold">A:</label>
+                        <select class="form-select" name="to" id="long-a"></select>
+                    </div>
+
+                    <button class="btn btn-success w-100">Calcular</button>
+
+                    @if (ViewBag.LengthResult != null)
+                    {
+                        <div class="alert alert-info text-center mt-3">@ViewBag.LengthResult</div>
+                    }
+                </form>
+            </div>
+        </div>
+
+        <!-- MASA -->
+        <div class="col-lg-4">
+            <div class="card p-4 shadow-sm" style="border-radius:18px;border:none;">
+                <h3 class="text-center text-primary mb-3">Masa</h3>
+
+                <form asp-action="Convertir" method="post" id="form-masa">
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" name="category" value="mass" />
+
+                    <input class="form-control mb-3" type="number" step="0.01" min="0" name="valor" placeholder="Ingrese valor" required />
+
+                    <div class="mb-2 d-flex align-items-center gap-2">
+                        <label class="fw-semibold">De:</label>
+                        <select class="form-select" name="from" id="masa-de"></select>
+                    </div>
+
+                    <div class="mb-3 d-flex align-items-center gap-2">
+                        <label class="fw-semibold">A:</label>
+                        <select class="form-select" name="to" id="masa-a"></select>
+                    </div>
+
+                    <button class="btn btn-success w-100">Calcular</button>
+
+                    @if (ViewBag.MassResult != null)
+                    {
+                        <div class="alert alert-info text-center mt-3">@ViewBag.MassResult</div>
+                    }
+                </form>
+            </div>
+        </div>
+
+        <!-- TEMPERATURA -->
+        <div class="col-lg-4">
+            <div class="card p-4 shadow-sm" style="border-radius:18px;border:none;">
+                <h3 class="text-center text-primary mb-3">Temperatura</h3>
+
+                <form asp-action="Convertir" method="post" id="form-temp">
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" name="category" value="temp" />
+
+                    <input class="form-control mb-3" type="number" step="0.01" name="valor" placeholder="Ingrese valor" required />
+
+                    <div class="mb-2 d-flex align-items-center gap-2">
+                        <label class="fw-semibold">De:</label>
+                        <select class="form-select" name="from" id="temp-de"></select>
+                    </div>
+
+                    <div class="mb-3 d-flex align-items-center gap-2">
+                        <label class="fw-semibold">A:</label>
+                        <select class="form-select" name="to" id="temp-a"></select>
+                    </div>
+
+                    <button class="btn btn-success w-100">Calcular</button>
+
+                    @if (ViewBag.TempResult != null)
+                    {
+                        <div class="alert alert-info text-center mt-3">@ViewBag.TempResult</div>
+                    }
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<script>
+    const longPairs = {
+        "Centímetros": ["Pies","Pulgadas"],
+        "Pulgadas": ["Centímetros"],
+        "Pies": ["Centímetros"],
+        "Metros": ["Yardas"],
+        "Yardas": ["Metros"]
+    };
+    const masaPairs = {
+        "Kilogramos": ["Libras"],
+        "Libras": ["Kilogramos"],
+        "Gramos": ["Onzas"],
+        "Onzas": ["Gramos"]
+    };
+    const tempPairs = {
+        "Celsius": ["Fahrenheit","Kelvin"],
+        "Fahrenheit": ["Celsius","Kelvin"],
+        "Kelvin": ["Celsius","Fahrenheit"]
+    };
+
+    function setup(ids, pairs){
+        const de = document.getElementById(ids.de);
+        const a  = document.getElementById(ids.a);
+
+        Object.keys(pairs).forEach(u=>{
+            let op=document.createElement('option'); op.value=u; op.textContent=u; de.appendChild(op);
+        });
+
+        const actualizarA = ()=>{
+            a.innerHTML='';
+            pairs[de.value].forEach(u=>{
+                let op=document.createElement('option'); op.value=u; op.textContent=u; a.appendChild(op);
+            });
+        };
+        de.addEventListener('change', actualizarA);
+        actualizarA();
+    }
+
+    setup({de:'long-de', a:'long-a'}, longPairs);
+    setup({de:'masa-de', a:'masa-a'}, masaPairs);
+    setup({de:'temp-de', a:'temp-a'}, tempPairs);
+</script>

@@ -106,7 +106,8 @@
               "RelativeToolTip": "Servidor_Dotnet_SOAP_GR04\\ec.edu.espe.monster.ws\\ConversionService.svc",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003504|",
-              "WhenOpened": "2025-11-04T22:08:29.708Z"
+              "WhenOpened": "2025-11-04T22:08:29.708Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -140,7 +141,7 @@
               "RelativeDocumentMoniker": "Servidor_Dotnet_SOAP_GR04\\ec.edu.espe.monster.controlador\\ConversionService.cs",
               "ToolTip": "C:\\Users\\magvx\\Documents\\8vo\\Arquitectura_G04\\TI1.2 SOAP_DOTNET_SINBD_GR04\\01.SERVIDOR\\Servidor_Dotnet_SOAP_GR04\\Servidor_Dotnet_SOAP_GR04\\ec.edu.espe.monster.controlador\\ConversionService.cs",
               "RelativeToolTip": "Servidor_Dotnet_SOAP_GR04\\ec.edu.espe.monster.controlador\\ConversionService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABKAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-21T19:20:30.638Z",
               "EditorCaption": ""

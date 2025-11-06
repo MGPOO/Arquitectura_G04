@@ -1,6 +1,6 @@
-﻿namespace ConUni_Rest_WebClient.Models;
+﻿namespace Cliente_Rest_G04.Models;
 
-public class ConversionResponse
+public sealed class ConversionResponse
 {
     public string DeUnidad { get; set; } = "";
     public string AUnidad { get; set; } = "";

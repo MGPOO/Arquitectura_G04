@@ -12,19 +12,25 @@ import java.util.Scanner;
  * @author Rabedon1
  */
 public class ConvensorView {
-    
+
     public static void main(String[] args) {
-        
-         Scanner sc = new Scanner(System.in);
-         ConvensorController controller = new ConvensorController();
-    
+
+        Scanner sc = new Scanner(System.in);
+        ConvensorController controller = new ConvensorController();
+
         System.out.println("=========================================");
         System.out.println("     CLIENTE CONSOLA - CONVERSOR REST");
         System.out.println("=========================================");
 
-     
+        // 🔐 LOGIN antes de continuar
+        if (!iniciarSesion(sc)) {
+            System.out.println("❌ Demasiados intentos fallidos. Cerrando programa...");
+            return;
+        }
+
+        // Verificar conexión al servidor REST
         if (!controller.verificarConexion()) {
-            System.out.println("No se puede continuar. Verifique que Payara esté en ejecución.");
+            System.out.println("❌ No se puede continuar. Verifique que Payara esté en ejecución.");
             return;
         }
 
@@ -52,36 +58,71 @@ public class ConvensorView {
         }
     }
 
-    private static void manejarConversion(String tipo, Scanner sc, ConvensorController controller) {
-        System.out.println("\n=== Conversión de " + tipo.toUpperCase() + " ===");
+    // 🔒 MÉTODO DE LOGIN
+    private static boolean iniciarSesion(Scanner sc) {
+        final String usuarioValido = "MONSTER";
+        final String contrasenaValida = "monster9";
+        int intentos = 0;
 
-        switch (tipo) {
-            case "longitud" -> {
-                System.out.println("Unidades disponibles: metros, kilometros, millas");
-            }
-            case "masa" -> {
-                System.out.println("Unidades disponibles: gramos, kilogramos, libras");
-            }
-            case "temperatura" -> {
-                System.out.println("Unidades disponibles: celsius, fahrenheit, kelvin");
+        System.out.println("\n=== INICIO DE SESIÓN ===");
+
+        while (intentos < 3) {
+            System.out.print("Usuario: ");
+            String usuario = sc.nextLine();
+
+            System.out.print("Contraseña: ");
+            String contrasena = sc.nextLine();
+
+            if (usuario.equals(usuarioValido) && contrasena.equals(contrasenaValida)) {
+                System.out.println("\n✅ Inicio de sesión exitoso. ¡Bienvenido, " + usuario + "!");
+                return true;
+            } else {
+                intentos++;
+                System.out.println("❌ Credenciales incorrectas. Intento " + intentos + " de 3.");
             }
         }
 
+        return false;
+    }
+
+    // ⚙️ MÉTODO PARA MANEJAR CONVERSIONES
+    private static void manejarConversion(String tipo, Scanner sc, ConvensorController controller) {
+    System.out.println("\n=== Conversión de " + tipo.toUpperCase() + " ===");
+
+    switch (tipo) {
+        case "longitud" -> System.out.println("Unidades disponibles: metros, kilometros, millas");
+        case "masa" -> System.out.println("Unidades disponibles: gramos, kilogramos, libras");
+        case "temperatura" -> System.out.println("Unidades disponibles: celsius, fahrenheit, kelvin");
+    }
+
+    double valor = 0;
+    boolean valorValido = false;
+
+    // 🔒 Validación de número
+    while (!valorValido) {
         System.out.print("Ingrese el valor a convertir: ");
-        double valor = sc.nextDouble();
-        sc.nextLine();
-
-        System.out.print("Unidad origen: ");
-        String origen = sc.nextLine();
-
-        System.out.print("Unidad destino: ");
-        String destino = sc.nextLine();
-
-        try {
-            double resultado = controller.convertir(tipo, valor, origen, destino);
-            System.out.printf("✅ Resultado: %.4f %s = %.4f %s%n", valor, origen, resultado, destino);
-        } catch (Exception e) {
-            System.out.println("❌ Error al realizar la conversión: " + e.getMessage());
+        if (sc.hasNextDouble()) {
+            valor = sc.nextDouble();
+            sc.nextLine(); // limpiar buffer
+            valorValido = true;
+        } else {
+            System.out.println("❌ Entrada no válida. Debe ingresar un número.");
+            sc.nextLine(); // limpiar entrada incorrecta
         }
     }
+
+    System.out.print("Unidad origen: ");
+    String origen = sc.nextLine();
+
+    System.out.print("Unidad destino: ");
+    String destino = sc.nextLine();
+
+    try {
+        double resultado = controller.convertir(tipo, valor, origen, destino);
+        System.out.printf("✅ Resultado: %.4f %s = %.4f %s%n", valor, origen, resultado, destino);
+    } catch (Exception e) {
+        System.out.println("❌ Error al realizar la conversión: " + e.getMessage());
+    }
+}
+
 }

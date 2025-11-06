@@ -20,8 +20,8 @@ import jakarta.servlet.http.HttpSession;
 @WebServlet(name = "Login", urlPatterns = {"/Login"})
 public class Login extends HttpServlet {
 
-    private static final String USUARIO = "admin";
-    private static final String CLAVE = "1234";
+    private static final String USUARIO = "MONSTER";
+    private static final String CLAVE = "monster9";
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

@@ -20,8 +20,14 @@ import jakarta.servlet.http.HttpSession;
 @WebServlet(name = "LoginServlet", urlPatterns = {"/LoginServlet"})
 public class LoginServlet extends HttpServlet {
 
-    private static final String USUARIO = "admin";
-    private static final String CLAVE = "1234";
+    private static final String USUARIO = "MONSTER";
+    private static final String CLAVE = "monster9";
+    
+//    @Override
+//    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+//                throws ServletException, IOException {
+//                response.sendRedirect("LoginServlet.jsp");
+//    }
     
      @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)

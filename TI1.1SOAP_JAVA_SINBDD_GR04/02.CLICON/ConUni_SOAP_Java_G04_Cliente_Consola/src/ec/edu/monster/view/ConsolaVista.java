@@ -47,11 +47,11 @@ public class ConsolaVista {
     }
 
     private boolean iniciarSesion() {
-        String usuarioValido = "admin";
-        String contrasenaValida = "1234";
+        String usuarioValido = "MONSTER";
+        String contrasenaValida = "monster9";
 
         System.out.println("===================================");
-        System.out.println("    🔐 SISTEMA DE CONVERSIONES");
+        System.out.println("     SISTEMA DE CONVERSIONES");
         System.out.println("===================================");
 
         int intentos = 0;

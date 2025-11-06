@@ -11,7 +11,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Conversor Universal (REST)</title>
+    <title>Conversor de Unidades (Cliente RESTFUL JAVA)</title>
     <style>
         body {
             font-family: 'Segoe UI', sans-serif;
@@ -47,7 +47,7 @@
             border-radius: 8px;
         }
         button {
-            background-color: #e63946;
+            background-color: #2ecc71;
             color: white;
             border: none;
             padding: 10px 20px;

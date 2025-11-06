@@ -1,4 +1,6 @@
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <%
     // Simula autenticación si aún no tienes login
     String usuario = "usuarioDemo";
@@ -57,7 +59,7 @@
             border-radius: 8px;
         }
         button {
-            background-color: #e63946;
+            background-color: #2ecc71;
             color: white;
             border: none;
             padding: 10px 20px;
@@ -103,8 +105,8 @@
     </style>
 </head>
 <body>
-    <h1>Conversor de Unidades (Servicio REST)</h1>
-    <a href="login.jsp" class="logout">Cerrar sesión</a>
+    <h1>Conversor de Unidades (Cliente SOAP JAVA)</h1>
+    
 
     <div class="container">
 

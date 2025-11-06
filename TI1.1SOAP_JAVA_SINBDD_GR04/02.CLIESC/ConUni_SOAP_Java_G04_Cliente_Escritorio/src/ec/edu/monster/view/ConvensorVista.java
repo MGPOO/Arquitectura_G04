@@ -88,7 +88,8 @@ public class ConvensorVista extends javax.swing.JFrame {
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Segoe UI Variable", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("CONVENSOR DE UNIDADES  (CLIENTE WEB SOAP)");
+        jLabel1.setText("CONVENSOR DE UNIDADES  (CLIENTE WEB SOAP JAVA)");
+        jLabel1.setToolTipText("");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -120,7 +121,7 @@ public class ConvensorVista extends javax.swing.JFrame {
 
         jLabel7.setText("UNIDAD DESTINO");
 
-        btnCalcularLongitud.setBackground(new java.awt.Color(204, 0, 0));
+        btnCalcularLongitud.setBackground(new java.awt.Color(0, 204, 51));
         btnCalcularLongitud.setForeground(new java.awt.Color(255, 255, 255));
         btnCalcularLongitud.setText("CALCULAR");
         btnCalcularLongitud.addActionListener(new java.awt.event.ActionListener() {
@@ -225,7 +226,7 @@ public class ConvensorVista extends javax.swing.JFrame {
             }
         });
 
-        btnCalcularMasa.setBackground(new java.awt.Color(204, 0, 0));
+        btnCalcularMasa.setBackground(new java.awt.Color(51, 204, 0));
         btnCalcularMasa.setForeground(new java.awt.Color(255, 255, 255));
         btnCalcularMasa.setText("CALCULAR");
         btnCalcularMasa.addActionListener(new java.awt.event.ActionListener() {
@@ -310,7 +311,7 @@ public class ConvensorVista extends javax.swing.JFrame {
             }
         });
 
-        btnCalcularTemperatura.setBackground(new java.awt.Color(204, 0, 0));
+        btnCalcularTemperatura.setBackground(new java.awt.Color(51, 204, 0));
         btnCalcularTemperatura.setForeground(new java.awt.Color(255, 255, 255));
         btnCalcularTemperatura.setText("CALCULAR");
         btnCalcularTemperatura.addActionListener(new java.awt.event.ActionListener() {

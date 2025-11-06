@@ -104,45 +104,56 @@
 </div>
 
 
+<!-- SCRIPT CORRECTO: MANTIENE DISEÑO + REST FUNCIONANDO -->
 <script>
     const longPairs = {
-        "Centímetros": ["Pies","Pulgadas"],
-        "Pulgadas": ["Centímetros"],
-        "Pies": ["Centímetros"],
-        "Metros": ["Yardas"],
-        "Yardas": ["Metros"]
+      "Centímetros": { value:"centimetros", to:["Pies","Pulgadas"] },
+      "Pulgadas":    { value:"pulgadas",    to:["Centímetros"] },
+      "Pies":        { value:"pies",        to:["Centímetros"] },
+      "Metros":      { value:"metros",      to:["Yardas"] },
+      "Yardas":      { value:"yardas",      to:["Metros"] }
     };
+
     const masaPairs = {
-        "Kilogramos": ["Libras"],
-        "Libras": ["Kilogramos"],
-        "Gramos": ["Onzas"],
-        "Onzas": ["Gramos"]
+      "Kilogramos": { value:"kilogramos", to:["Libras"] },
+      "Libras":     { value:"libras",     to:["Kilogramos"] },
+      "Gramos":     { value:"gramos",     to:["Onzas"] },
+      "Onzas":      { value:"onzas",      to:["Gramos"] }
     };
+
     const tempPairs = {
-        "Celsius": ["Fahrenheit","Kelvin"],
-        "Fahrenheit": ["Celsius","Kelvin"],
-        "Kelvin": ["Celsius","Fahrenheit"]
+      "Celsius":    { value:"celsius",    to:["Fahrenheit","Kelvin"] },
+      "Fahrenheit": { value:"fahrenheit", to:["Celsius","Kelvin"] },
+      "Kelvin":     { value:"kelvin",     to:["Celsius","Fahrenheit"] }
     };
 
     function setup(ids, pairs){
         const de = document.getElementById(ids.de);
         const a  = document.getElementById(ids.a);
 
-        Object.keys(pairs).forEach(u=>{
-            let op=document.createElement('option'); op.value=u; op.textContent=u; de.appendChild(op);
+        Object.keys(pairs).forEach(label=>{
+            let op=document.createElement("option");
+            op.textContent = label;
+            op.value = pairs[label].value;
+            de.appendChild(op);
         });
 
-        const actualizarA = ()=>{
-            a.innerHTML='';
-            pairs[de.value].forEach(u=>{
-                let op=document.createElement('option'); op.value=u; op.textContent=u; a.appendChild(op);
+        function actualizarA(){
+            a.innerHTML = '';
+            let lbl = Object.keys(pairs).find(k => pairs[k].value === de.value);
+            pairs[lbl].to.forEach(label=>{
+                let op=document.createElement("option");
+                op.textContent = label;
+                op.value = pairs[label].value;
+                a.appendChild(op);
             });
-        };
-        de.addEventListener('change', actualizarA);
+        }
+
+        de.addEventListener("change", actualizarA);
         actualizarA();
     }
 
     setup({de:'long-de', a:'long-a'}, longPairs);
-    setup({de:'masa-de', a:'masa-a'}, masaPairs);
-    setup({de:'temp-de', a:'temp-a'}, tempPairs);
+    setup({de:'masa-de',  a:'masa-a'}, masaPairs);
+    setup({de:'temp-de',  a:'temp-a'}, tempPairs);
 </script>

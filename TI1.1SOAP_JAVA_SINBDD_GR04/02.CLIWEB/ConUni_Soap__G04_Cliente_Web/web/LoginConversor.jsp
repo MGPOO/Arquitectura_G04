@@ -56,10 +56,15 @@
             width: 120px;
             margin-bottom: 15px;
         }
+        h1 {
+            color:#185a9d;
+        }
     </style>
 </head>
 <body>
     <div class="login-box">
+        
+        <h1>Conversor SOAP JAVA G04</h1>
         <img src="images/ldu_quito.png" alt="Logo">
         <h2>Iniciar Sesión</h2>
         <form action="LoginServlet" method="post">

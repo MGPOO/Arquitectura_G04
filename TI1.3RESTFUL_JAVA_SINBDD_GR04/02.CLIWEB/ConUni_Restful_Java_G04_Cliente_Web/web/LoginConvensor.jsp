@@ -51,6 +51,10 @@
             width: 120px;
             margin-bottom: 15px;
         }
+        
+        h1 {
+            color:#185a9d;
+        }
     </style>
 </head>
 <body>
@@ -58,7 +62,7 @@
 <div class="login-container">
     
 
-    
+    <h1>Conversor RESTFUL JAVA G04</h1>
     <img src="images/ldu_quito.png" alt="Logo">
 
     <h2>Iniciar Sesión</h2>
